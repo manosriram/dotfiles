@@ -8,13 +8,14 @@ set noswapfile
 let g:airline_theme='papercolor'
 map <silent> <C-b> :NERDTreeFocus<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
+noremap <Leader>\t :botright vertical terminal
 
 " set the runtime path to include Vundle and initialize
 let g:NERDTreeDirArrows=0
 set rtp+=~/.vim/bundle/Vundle.vim
 
 set t_Co=256
-set background=dark
+" set background=dark
 call vundle#begin()
 colorscheme tequila-sunrise
 
@@ -23,7 +24,12 @@ set softtabstop=0 noexpandtab
 set shiftwidth=4
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
+
+"call vundle#begin('~/some/path/here')
+
 " let Vundle manage Vundle, required
+
+
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
