@@ -5,7 +5,6 @@ set number
 set laststatus=2
 set noswapfile
 
-let g:airline_theme='papercolor'
 map <silent> <C-b> :NERDTreeFocus<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
 noremap <Leader>\t :botright vertical terminal
@@ -19,12 +18,13 @@ set t_Co=256
 call vundle#begin()
 colorscheme tequila-sunrise
 
+
 set tabstop=4
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
-
-
+set splitbelow
+set splitright
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
@@ -36,6 +36,9 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'Chiel92/vim-autoformat'
 
+" Airline Settings.
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 
