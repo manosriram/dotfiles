@@ -16,8 +16,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 set t_Co=256
 " set background=dark
 call vundle#begin()
-colorscheme tequila-sunrise
+colorscheme detailed
 
+"Can enable powerline fonts.
+let g:airline_powerline_fonts = 1
 
 set tabstop=4
 set softtabstop=0 noexpandtab
@@ -25,16 +27,16 @@ set shiftwidth=4
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set splitbelow
 set splitright
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-
 
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 
 Plugin 'Chiel92/vim-autoformat'
+
+Plugin 'flazz/vim-colorschemes'
 
 " Airline Settings.
 Plugin 'vim-airline/vim-airline'
