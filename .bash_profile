@@ -48,7 +48,7 @@ bldgrn='\e[1;32m' # Bold Green
 bldpur='\e[1;35m' # Bold Purple
 txtrst='\e[0m'    # Text Reset
 
-emojis=("💥" "🔥")
+emojis=("💥" "🔥" "⚡️")
 
 
 EMOJI=${emojis[$RANDOM % ${#emojis[@]} ]}
@@ -72,6 +72,10 @@ function tvim() {
     touch $1 && vim $1
 }
 
+function cprun() {
+    g++ -std=c++17 $1 && ./a.out
+}
+
 # -------
 # Aliases
 # -------
@@ -88,7 +92,7 @@ alias l="ls" # List files in current directory
 alias ll="ls -al" # List all files in current directory in long list format
 alias o="open ." # Open the current directory in Finder
 alias tvim=tvim
-
+alias cprun=cprun
 # ----------------------
 # Git Aliases
 # ----------------------
