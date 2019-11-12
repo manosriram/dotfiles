@@ -14,12 +14,14 @@ let g:NERDTreeDirArrows=0
 set rtp+=~/.vim/bundle/Vundle.vim
 
 set t_Co=256
-" set background=dark
+set background=dark
 call vundle#begin()
-colorscheme detailed
-
+colorscheme molokai
 "Can enable powerline fonts.
+
 let g:airline_powerline_fonts = 1
+let g:molokai_original = 1
+let g:rehash256 = 1
 
 set tabstop=4
 set softtabstop=0 noexpandtab
@@ -29,7 +31,6 @@ set splitbelow
 set splitright
 
 " let Vundle manage Vundle, required
-
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
