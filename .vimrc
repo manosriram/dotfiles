@@ -22,6 +22,7 @@ colorscheme molokai
 let g:airline_powerline_fonts = 1
 let g:molokai_original = 1
 let g:rehash256 = 1
+let g:airline_theme='wombat'
 
 set tabstop=4
 set softtabstop=0 noexpandtab
@@ -30,6 +31,9 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set splitbelow
 set splitright
 
+set ttimeout
+set ttimeoutlen=50
+set timeoutlen=3000
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
