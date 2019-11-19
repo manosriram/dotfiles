@@ -73,7 +73,7 @@ function tvim() {
 }
 
 function cprun() {
-    g++ -std=c++17 $1 && ./a.out
+    g++ -std=c++14 $1 && ./a.out && cat out.txt
 }
 
 # -------
