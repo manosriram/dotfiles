@@ -76,6 +76,10 @@ function cprun() {
     g++ -std=c++14 $1 && ./a.out && cat out.txt
 }
 
+function cpprun() {
+    g++ -std=c++17 $1 && ./a.out
+}
+
 # -------
 # Aliases
 # -------
