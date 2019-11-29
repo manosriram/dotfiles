@@ -48,11 +48,6 @@ bldgrn='\e[1;32m' # Bold Green
 bldpur='\e[1;35m' # Bold Purple
 txtrst='\e[0m'    # Text Reset
 
-emojis=("💥" "🔥" "⚡️")
-
-
-EMOJI=${emojis[$RANDOM % ${#emojis[@]} ]}
-
 print_before_the_prompt () {
     dir=$PWD
     home=$HOME
@@ -62,7 +57,7 @@ print_before_the_prompt () {
 
 PROMPT_COMMAND=print_before_the_prompt
 PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-PS1=" $EMOJI > "
+PS1="→ "
 
 function mkcd() {
 	mkdir $1 && cd $1
@@ -78,6 +73,12 @@ function cprun() {
 
 function cpprun() {
     g++ -std=c++17 $1 && ./a.out
+}
+
+function gacp() {
+    git add .;
+    git commit -m $1;
+    git push origin $2;
 }
 
 # -------
