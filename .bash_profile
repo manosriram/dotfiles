@@ -41,6 +41,7 @@ bind '"\e[B": history-search-forward'
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
+export TERM=xterm-256color
 
 txtred='\e[0;31m' # Red
 txtgrn='\e[0;32m' # Green
@@ -52,7 +53,7 @@ print_before_the_prompt () {
     dir=$PWD
     home=$HOME
     dir=${dir/"$HOME"/"~"}
-    printf "\n $txtred%s: $bldgrn%s\n$txtrst" "$HOST_NAME" "$dir"
+    printf "\n$txtgrn%s $txtrst\n" "$dir"
 }
 
 PROMPT_COMMAND=print_before_the_prompt

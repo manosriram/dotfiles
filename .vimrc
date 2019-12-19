@@ -5,6 +5,9 @@ set number
 set laststatus=2
 set noswapfile
 
+filetype indent on
+set smartindent
+
 map <silent> <C-b> :NERDTreeFocus<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
 noremap <Leader>\t :botright vertical terminal
@@ -31,6 +34,9 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set splitbelow
 set splitright
 set relativenumber
+filetype plugin indent on
+
+let g:user_emmet_leader_key=','
 
 set ttimeout
 set ttimeoutlen=50
@@ -40,9 +46,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 
+Plugin 'prettier/vim-prettier'
+
 Plugin 'Chiel92/vim-autoformat'
 
 Plugin 'flazz/vim-colorschemes'
+
+Plugin 'mattn/emmet-vim'
 
 " Airline Settings.
 Plugin 'vim-airline/vim-airline'
