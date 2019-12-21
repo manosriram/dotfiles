@@ -46,8 +46,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 
-Plugin 'prettier/vim-prettier'
-
 Plugin 'Chiel92/vim-autoformat'
 
 Plugin 'flazz/vim-colorschemes'
