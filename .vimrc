@@ -5,6 +5,7 @@ set number
 set laststatus=2
 set noswapfile
 
+filetype plugin indent on
 filetype indent on
 set smartindent
 
@@ -19,13 +20,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 set t_Co=256
 set background=dark
 call vundle#begin()
-colorscheme molokai
+colorscheme jellybeans
 "Can enable powerline fonts.
 
-let g:airline_powerline_fonts = 1
 let g:molokai_original = 1
 let g:rehash256 = 1
-let g:airline_theme='wombat'
+let g:airline_theme='jellybeans'
+let g:jellybeans_use_lowcolor_black = 1
+let g:jellybeans_use_term_italics = 1
 
 set tabstop=4
 set softtabstop=0 noexpandtab
@@ -34,13 +36,13 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set splitbelow
 set splitright
 set relativenumber
-filetype plugin indent on
 
 let g:user_emmet_leader_key=','
 
 set ttimeout
 set ttimeoutlen=50
 set timeoutlen=3000
+
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
