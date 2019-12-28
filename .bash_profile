@@ -82,6 +82,10 @@ function gacp() {
     git push origin $2;
 }
 
+function CD_Desktop() {
+    cd ~/desktop/$1
+}
+
 # -------
 # Aliases
 # -------
@@ -99,6 +103,7 @@ alias ll="ls -al" # List all files in current directory in long list format
 alias o="open ." # Open the current directory in Finder
 alias tvim=tvim
 alias cprun=cprun
+alias desk=CD_Desktop
 # ----------------------
 # Git Aliases
 # ----------------------
