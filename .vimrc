@@ -43,6 +43,7 @@ set ttimeout
 set ttimeoutlen=50
 set timeoutlen=3000
 
+
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -53,6 +54,8 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'flazz/vim-colorschemes'
 
 Plugin 'mattn/emmet-vim'
+
+Plugin 'prettier/vim-prettier', { 'do': 'npm install' }
 
 " Airline Settings.
 Plugin 'vim-airline/vim-airline'
