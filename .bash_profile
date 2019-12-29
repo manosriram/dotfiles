@@ -86,6 +86,14 @@ function CD_Desktop() {
     cd ~/desktop/$1
 }
 
+function list() {
+    ls -l
+}
+
+function listAll() {
+    ls -a -l
+}
+
 # -------
 # Aliases
 # -------
@@ -104,18 +112,5 @@ alias o="open ." # Open the current directory in Finder
 alias tvim=tvim
 alias cprun=cprun
 alias desk=CD_Desktop
-# ----------------------
-# Git Aliases
-# ----------------------
-alias ga='git add'
-alias gaa='git add .'
-alias gaaa='git add -A'
-alias gc='git commit'
-alias gcm='git commit -m'
-alias gd='git diff'
-alias gi='git init'
-alias gl='git log'
-alias gp='git pull'
-alias gpsh='git push'
-alias gss='git status -s'
-alias gs='echo ""; echo "*********************************************"; echo -e "   DO NOT FORGET TO PULL BEFORE COMMITTING"; echo "*********************************************"; echo ""; git status'
+alias lst=list
+alias lsta=listAll
