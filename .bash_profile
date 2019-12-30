@@ -94,6 +94,10 @@ function listAll() {
     ls -a -l
 }
 
+function goBack() {
+    cd ../
+}
+
 # -------
 # Aliases
 # -------
@@ -114,3 +118,4 @@ alias cprun=cprun
 alias desk=CD_Desktop
 alias lst=list
 alias lsta=listAll
+alias back=goBack
