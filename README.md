@@ -5,5 +5,5 @@
 </div>
 
 ```
-Dot Files for Vim 8.1.1312 and iTerm2 💥.
+Dot Files for Vim 8.1.1312 and iTerm2 (Bash and Zsh) 💥.
 ```
