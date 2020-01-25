@@ -98,9 +98,7 @@ function goBack() {
     cd ../
 }
 
-# -------
 # Aliases
-# -------
 alias 🍺="git checkout -b drunk"
 alias a='code .'
 alias c='code .'
