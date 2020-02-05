@@ -20,14 +20,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 set t_Co=256
 set background=dark
 call vundle#begin()
-colorscheme jellybeans
+colorscheme badwolf
 "Can enable powerline fonts.
 
 let g:molokai_original = 1
 let g:rehash256 = 1
-let g:airline_theme='jellybeans'
-let g:jellybeans_use_lowcolor_black = 1
-let g:jellybeans_use_term_italics = 1
+let g:airline_theme='badwolf'
 
 set tabstop=4
 set softtabstop=0 noexpandtab
