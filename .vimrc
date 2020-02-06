@@ -20,12 +20,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 set t_Co=256
 set background=dark
 call vundle#begin()
-colorscheme badwolf
+colorscheme molokai_dark
 "Can enable powerline fonts.
 
 let g:molokai_original = 1
 let g:rehash256 = 1
-let g:airline_theme='badwolf'
+let g:airline_theme='minimalist'
 
 set tabstop=4
 set softtabstop=0 noexpandtab
