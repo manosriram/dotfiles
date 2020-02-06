@@ -19,6 +19,10 @@ function tvim() {
     touch $1 && vim $1
 }
 
+function gacp() {
+    git add . && git commit -m $1 && git push $2 $3
+}
+
 # Aliases.
 alias lst="ls -l"
 alias lsta="ls -a -l"
@@ -26,9 +30,8 @@ alias desk="cd desktop"
 alias tvim=tvim
 alias cprun=cprun
 alias desk=CD_Desktop
-alias back=goBack
 alias nrd="npm run dev"
-
+alias gacp=gacp
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
