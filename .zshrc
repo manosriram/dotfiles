@@ -20,7 +20,15 @@ function tvim() {
 }
 
 function gacp() {
-    git add . && git commit -m $1 && git push $2 $3
+    git add .;
+    git commit -m $1;
+    git push $2 $3;
+}
+
+function initIgnore() {
+    touch .gitignore;
+    echo "a.out" >> .gitignore;
+    echo ".DS_Store" >> .gitignore;
 }
 
 # Aliases.
@@ -32,6 +40,7 @@ alias cprun=cprun
 alias desk=CD_Desktop
 alias nrd="npm run dev"
 alias gacp=gacp
+alias init=initIgnore
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
