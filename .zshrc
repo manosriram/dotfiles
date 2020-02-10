@@ -41,6 +41,7 @@ alias desk=CD_Desktop
 alias nrd="npm run dev"
 alias gacp=gacp
 alias init=initIgnore
+alias stat="git status"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
