@@ -8,6 +8,7 @@
 #include <limits.h>
 #include <stack>
 #include <queue>
+#include <time.h>
 #include "unordered_map"
 using namespace std;
 #define MAX INT_MAX
@@ -15,6 +16,13 @@ using namespace std;
 #define INF 1e9
 #define FASTER cin.sync_with_stdio(false);cin.tie(NULL);
 #define pb push_back
-#define ld long long int
+#define ll long long int
 typedef vector<int> vi;
 typedef pair<int,int> pi;
+
+int main() {
+    clock_t tStart = clock();
+
+
+    cout << "Time Taken: " << (double)(clock() - tStart)/CLOCKS_PER_SEC << endl;
+}
