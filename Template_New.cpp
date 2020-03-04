@@ -25,6 +25,4 @@ int main() {
     while (T--) {
 
     }
-
-    debug;
 }
