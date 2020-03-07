@@ -20,9 +20,14 @@ int main() {
 #ifndef ONLINE_JUDGE
     freopen("in.txt", "r", stdin);
 #endif
+
     int T;
     cin >> T;
     while (T--) {
 
     }
+
+#ifndef ONLINE_JUDGE
+    cout << "Time Taken: " << (double)(clock() - tStart)/CLOCKS_PER_SEC << endl;
+#endif
 }
