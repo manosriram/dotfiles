@@ -18,6 +18,7 @@ using namespace std;
 int main() {
     FASTER;
 #ifndef ONLINE_JUDGE
+    clock_t tStart = clock();
     freopen("in.txt", "r", stdin);
 #endif
 
