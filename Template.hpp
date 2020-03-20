@@ -21,10 +21,16 @@ typedef vector<int> vi;
 typedef pair<int,int> pi;
 
 int main() {
+#ifndef ONLINE_JUDGE
     clock_t tStart = clock();
     freopen("in.txt", "r", stdin);
     freopen("out.txt", "w", stdout);
+#endif
 
 
+
+#ifndef ONLINE_JUDGE
     cout << "Time Taken: " << (double)(clock() - tStart)/CLOCKS_PER_SEC << endl;
+#endif
+
 }
