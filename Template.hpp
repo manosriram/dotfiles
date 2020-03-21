@@ -23,8 +23,9 @@ typedef pair<int,int> pi;
 int main() {
 #ifndef ONLINE_JUDGE
     clock_t tStart = clock();
-    freopen("in.txt", "r", stdin);
-    freopen("out.txt", "w", stdout);
+    freopen("in", "r", stdin);
+    freopen("out", "w", stdout);
+    freopen("err", "w", stderr);
 #endif
 
 
