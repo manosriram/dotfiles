@@ -4,6 +4,7 @@ syntax on
 set number
 set laststatus=2
 set noswapfile
+set autoread
 
 filetype plugin indent on
 filetype indent on
@@ -25,6 +26,7 @@ let g:molokai_original = 1
 let g:rehash256 = 1
 let g:airline_theme='minimalist'
 
+set backspace=indent,eol,start
 set tabstop=4
 set softtabstop=0 noexpandtab
 set shiftwidth=4
