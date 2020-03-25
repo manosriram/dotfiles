@@ -1,4 +1,4 @@
-// g++ cpp.cpp -o a.out && ./a.out < in
+// g++ -std=c++17 cpp.cpp -o a.out && ./a.out < in
 #include <iostream>
 #include <map>
 #include <math.h>
