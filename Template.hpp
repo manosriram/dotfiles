@@ -1,3 +1,4 @@
+// g++ cpp.cpp -o a.out && ./a.out < in
 #include <iostream>
 #include <map>
 #include <math.h>
@@ -24,7 +25,6 @@ int main() {
     cin.tie(NULL);
 #ifndef ONLINE_JUDGE
     clock_t tStart = clock();
-    freopen("in", "r", stdin);
     freopen("out", "w", stdout);
     freopen("err", "w", stderr);
 #endif
