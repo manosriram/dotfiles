@@ -20,9 +20,10 @@ typedef vector<int> vi;
 typedef pair<int,int> pi;
 typedef long long ll;
 
+int a[1000001];
 int main() {
     cin.sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(nullptr);
 #ifndef ONLINE_JUDGE
     clock_t tStart = clock();
     freopen("out", "w", stdout);
