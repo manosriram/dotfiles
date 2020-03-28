@@ -1,3 +1,4 @@
+// g++ -std=c++17 cpp.cpp -o a.out && ./a.out < in
 #include <iostream>
 #include <algorithm>
 #include <math.h>
