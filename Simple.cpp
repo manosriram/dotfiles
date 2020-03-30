@@ -8,6 +8,7 @@
 #define IOS cin.sync_with_stdio(false);cin.tie(nullptr);
 #define endl "\n"
 #define pb push_back
+#define rep(t, n) for (int t=0;t<(n);++t)
 const ll NN = 1e5+5;
 using namespace std;
 
