@@ -18,9 +18,10 @@ let g:NERDTreeDirArrows=0
 set rtp+=~/.vim/bundle/Vundle.vim
 
 set t_Co=256
+let g:onedark_termcolors=256
 set background=dark
 call vundle#begin()
-colorscheme molokai_dark
+colorscheme gruvbox
 
 let g:molokai_original = 1
 let g:rehash256 = 1
