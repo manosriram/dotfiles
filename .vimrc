@@ -23,9 +23,8 @@ set background=dark
 call vundle#begin()
 colorscheme gruvbox
 
-let g:molokai_original = 1
 let g:rehash256 = 1
-let g:airline_theme='minimalist'
+let g:airline_theme='base16_chalk'
 
 set backspace=indent,eol,start
 set tabstop=4
