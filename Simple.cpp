@@ -1,9 +1,10 @@
-// g++ -std=c++17 cpp.cpp -o a.out && ./a.out < in
+// g++ -std=c++17 file.cpp -o a.out && ./a.out < in
 #include <iostream>
 #include <algorithm>
 #include <math.h>
 #include <string>
 #include <map>
+#include <vector>
 #define ll long long
 #define IOS cin.sync_with_stdio(false);cin.tie(nullptr);
 #define endl "\n"
@@ -13,6 +14,8 @@ const ll NN = 1e5+5;
 using namespace std;
 
 int main() {
+    freopen("in", "r", stdin);
+    freopen("out", "w", stdout);
     IOS;
 }
 

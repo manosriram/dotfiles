@@ -21,10 +21,9 @@ set t_Co=256
 let g:onedark_termcolors=256
 set background=dark
 call vundle#begin()
-colorscheme gruvbox
+colorscheme spacegray
 
 let g:rehash256 = 1
-let g:airline_theme='base16_chalk'
 
 set backspace=indent,eol,start
 set tabstop=4
@@ -36,6 +35,16 @@ set splitright
 set relativenumber
 
 let g:user_emmet_leader_key=','
+
+let base16colorspace=256
+ 
+let g:spacegray_underline_search = 1
+let g:spacegray_italicize_comments = 1
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='hybrid'
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1 
 
 set ttimeout
 set ttimeoutlen=50
