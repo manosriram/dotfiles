@@ -41,8 +41,7 @@ let base16colorspace=256
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='hybrid'
+let g:airline_theme='fruit_punch'
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1 
 
