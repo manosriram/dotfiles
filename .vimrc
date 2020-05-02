@@ -10,6 +10,7 @@ filetype plugin indent on
 filetype indent on
 set smartindent
 
+map <Enter> o<ESC>
 map <silent> <C-b> :NERDTreeFocus<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
 noremap <Leader>\t :botright vertical terminal
@@ -21,7 +22,7 @@ set t_Co=256
 let g:onedark_termcolors=256
 set background=dark
 call vundle#begin()
-colorscheme spacegray
+colorscheme monochrome
 
 let g:rehash256 = 1
 
@@ -42,7 +43,7 @@ let base16colorspace=256
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
 
-let g:airline_theme='fruit_punch'
+let g:airline_theme='monochrome'
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1 
 
