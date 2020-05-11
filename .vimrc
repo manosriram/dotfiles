@@ -9,6 +9,7 @@ set autoread
 filetype plugin indent on
 filetype indent on
 set smartindent
+set autoindent
 
 if (executable('rg'))
     let g:rg_derive_root = 'true'
@@ -22,6 +23,8 @@ endif
 map <Enter> o<ESC>
 map <silent> <C-b> :NERDTreeFocus<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
+map ; :Files<CR>
+
 noremap <Leader>\t :botright vertical terminal
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
@@ -71,11 +74,13 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'git@github.com:Valloric/YouCompleteMe.git'
 Plugin 'mileszs/ack.vim'
-Plugin 'git@github.com:kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mattn/emmet-vim'
 Plugin 'prettier/vim-prettier', { 'do': 'npm install' }
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
 
 " Airline Settings.
 Plugin 'vim-airline/vim-airline'

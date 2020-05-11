@@ -39,6 +39,7 @@ export HISTFILESIZE=10000
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export TERM=xterm-256color
@@ -59,6 +60,10 @@ print_before_the_prompt () {
 PROMPT_COMMAND=print_before_the_prompt
 PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 PS1="→ "
+
+function crun() {
+    gcc $1 && ./a.out
+}
 
 function mkcd() {
 	mkdir $1 && cd $1
@@ -99,7 +104,6 @@ function goBack() {
 }
 
 # Aliases
-alias 🍺="git checkout -b drunk"
 alias a='code .'
 alias c='code .'
 alias reveal-md="reveal-md --theme night --highlight-theme hybrid --port 1337"
