@@ -5,6 +5,7 @@ set number
 set laststatus=2
 set noswapfile
 set autoread
+set noshowmode
 
 filetype plugin indent on
 filetype indent on
@@ -32,6 +33,11 @@ nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
 nnoremap ,v <C-w>v
 nnoremap ,h <C-w>s
+
+" lightline config
+let g:lightline = {
+    \ 'colorscheme': 'gruvbox'
+    \ }
 
 let g:NERDTreeDirArrows=0
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -81,10 +87,7 @@ Plugin 'prettier/vim-prettier', { 'do': 'npm install' }
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
-
-" Airline Settings.
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'itchyny/lightline.vim'
 
 " Plugins come before this line.
 call vundle#end()
