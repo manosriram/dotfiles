@@ -22,6 +22,7 @@ if executable('ag')
 endif
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+set completeopt-=preview
 
 map <Enter> o<ESC>
 map <silent> <C-b> :NERDTreeFocus<CR>
