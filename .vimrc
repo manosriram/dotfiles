@@ -6,7 +6,6 @@ set laststatus=2
 set noswapfile
 set autoread
 set noshowmode
-
 filetype plugin indent on
 filetype indent on
 set smartindent
@@ -21,6 +20,7 @@ if executable('ag')
     let g:ctrlp_user_command = ' ag %s -l --nocolor -g ""'
 endif
 
+inoremap <expr> <Enter> pumvisible() ? "<Esc>a" : "<Enter>"
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 set completeopt-=preview
 
@@ -77,6 +77,8 @@ let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1 
+
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " Vundle Plugins
 Plugin 'VundleVim/Vundle.vim'
