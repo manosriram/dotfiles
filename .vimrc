@@ -39,19 +39,21 @@ nnoremap ,h <C-w>s
 
 " lightline config
 let g:lightline = {
-    \ 'colorscheme': 'gruvbox'
+    \ 'colorscheme': 'ayu_dark'
     \ }
+
+" Theme config
+set termguicolors     " enable true colors support
+let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
 
 let g:NERDTreeDirArrows=0
 set rtp+=~/.vim/bundle/Vundle.vim
-
 set encoding=utf8
 set t_Co=256
 
 call vundle#begin()
 
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
 set background=dark
 hi Visual term=reverse cterm=reverse guibg=White
 let base16colorspace=256
@@ -72,12 +74,8 @@ set ttimeoutlen=50
 set timeoutlen=3000
 
 let g:user_emmet_leader_key=','
-let base16colorspace=256
-let g:spacegray_underline_search = 1
-let g:spacegray_italicize_comments = 1
-let g:hybrid_custom_term_colors = 1
-let g:hybrid_reduced_contrast = 1 
 
+" Prettier Config
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " Vundle Plugins
@@ -93,6 +91,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'itchyny/lightline.vim'
+Plugin 'ayu-theme/ayu-vim'
 
 " Plugins come before this line.
 call vundle#end()

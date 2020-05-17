@@ -24,15 +24,11 @@ unset __conda_setup
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 export PATH
-
-
 HOST_NAME=_ManoSr
-
 shopt -s autocd
 shopt -s histappend
-
 export PATH=$PATH:$HOME/bin
-
+export HOMEBREW_NO_AUTO_UPDATE=1
 export HISTSIZE=5000
 export HISTFILESIZE=10000
 
