@@ -28,6 +28,7 @@ map <Enter> o<ESC>
 map <silent> <C-b> :NERDTreeFocus<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
 map ; :Files<CR>
+map / /\v
 
 noremap <Leader>\t :botright vertical terminal
 nnoremap <C-j> <C-w><C-j>
