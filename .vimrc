@@ -38,6 +38,11 @@ nnoremap <C-h> <C-w><C-h>
 nnoremap ,v <C-w>v
 nnoremap ,h <C-w>s
 
+"Tabs mapping
+nnoremap tn :tabnew<Space>
+nnoremap th :tabfirst<CR>
+nnoremap tl :tablast<CR>
+
 " lightline config
 let g:lightline = {
     \ 'colorscheme': 'ayu_dark'
