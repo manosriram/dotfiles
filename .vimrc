@@ -82,7 +82,7 @@ set timeoutlen=3000
 let g:user_emmet_leader_key=','
 
 " Prettier Config
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " Vundle Plugins
 Plugin 'VundleVim/Vundle.vim'
@@ -98,6 +98,7 @@ Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'ayu-theme/ayu-vim'
+Plugin 'vim-javascript'
 
 " Plugins come before this line.
 call vundle#end()
