@@ -34,10 +34,6 @@ function initIgnore() {
     echo ".DS_Store" >> .gitignore;
 }
 
-function vimrun() {
-    g++ -std=c++17 $1 && ./a.out < in
-}
-
 # Aliases.
 alias lst="ls -l"
 alias lsta="ls -a -l"
@@ -49,7 +45,8 @@ alias nrd="npm run dev"
 alias gacp=gacp
 alias init=initIgnore
 alias stat="git status"
-alias vr=vimrun
+alias gb="git branch"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
