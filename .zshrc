@@ -32,6 +32,11 @@ function initIgnore() {
     touch .gitignore;
     echo "a.out" >> .gitignore;
     echo ".DS_Store" >> .gitignore;
+    echo "node_modules" >> .gitignore;
+}
+
+function gitch() {
+    git checkout $1;
 }
 
 # Aliases.
@@ -46,6 +51,7 @@ alias gacp=gacp
 alias init=initIgnore
 alias stat="git status"
 alias gb="git branch"
+alias gc=gitch
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
