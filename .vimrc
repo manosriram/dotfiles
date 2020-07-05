@@ -45,13 +45,14 @@ nnoremap tl :tablast<CR>
 
 " lightline config
 let g:lightline = {
-    \ 'colorscheme': 'ayu_dark'
+    \ 'colorscheme': 'gruvbox'
     \ }
 
 " Theme config
 set termguicolors     " enable true colors support
-let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+set background=dark
 
 let g:NERDTreeDirArrows=0
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -60,7 +61,6 @@ set t_Co=256
 
 call vundle#begin()
 
-set background=dark
 hi Visual term=reverse cterm=reverse guibg=White
 let base16colorspace=256
 
@@ -97,7 +97,6 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'itchyny/lightline.vim'
-Plugin 'ayu-theme/ayu-vim'
 Plugin 'vim-javascript'
 
 " Plugins come before this line.
