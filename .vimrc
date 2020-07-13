@@ -6,10 +6,6 @@ set laststatus=2
 set noswapfile
 set autoread
 set noshowmode
-filetype plugin indent on
-filetype indent on
-set smartindent
-set autoindent
 
 if (executable('rg'))
     let g:rg_derive_root = 'true'
@@ -29,6 +25,7 @@ map <silent> <C-b> :NERDTreeFocus<CR>
 map <silent> <C-n> :NERDTreeToggle<CR>
 map ; :Files<CR>
 map / /\v
+map z dd
 
 noremap <Leader>\t :botright vertical terminal
 nnoremap <C-j> <C-w><C-j>
