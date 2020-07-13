@@ -4,5 +4,5 @@
 </div>
 
 ```
-Dot Files for Vim(8.2.654) and Alacritty 💥.
+Dot Files for Vim and Alacritty 💥.
 ```
