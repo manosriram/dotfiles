@@ -35,6 +35,7 @@ nnoremap <C-h> <C-w><C-h>
 nnoremap ,v <C-w>v
 nnoremap ,h <C-w>s
 
+
 "Tabs mapping
 nnoremap tn :tabnew<Space>
 nnoremap th :tabfirst<CR>
@@ -45,6 +46,8 @@ let g:lightline = {
     \ 'colorscheme': 'gruvbox'
     \ }
 
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " Theme config
 set termguicolors     " enable true colors support
 colorscheme gruvbox

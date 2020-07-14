@@ -5,6 +5,7 @@
 export ZSH="/Users/manosriram/.oh-my-zsh"
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export LC_ALL=en_US.UTF-8
+export TERM="screen-256color"
 
 function cprun() {
     g++ -std=c++14 $1 && ./a.out && cat out.txt
