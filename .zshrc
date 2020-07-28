@@ -6,6 +6,7 @@ export ZSH="/Users/manosriram/.oh-my-zsh"
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export LC_ALL=en_US.UTF-8
 export TERM="screen-256color"
+export PATH=${PATH}:/usr/local/mysql/bin
 
 function cprun() {
     g++ -std=c++14 $1 && ./a.out && cat out.txt
@@ -40,6 +41,14 @@ function gitch() {
     git checkout $1;
 }
 
+function tattach() {
+    tmux attach-session -t $1
+}
+
+function tdetach() {
+    tmux detach
+}
+
 # Aliases.
 alias lst="ls -l"
 alias lsta="ls -a -l"
@@ -53,6 +62,13 @@ alias init=initIgnore
 alias stat="git status"
 alias gb="git branch"
 alias gc=gitch
+
+# TMUX Alias
+alias tm="tmux"
+alias tls="tmux ls"
+alias ta=tattach
+alias td=tdetach
+alias tk="tmux kill-server"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

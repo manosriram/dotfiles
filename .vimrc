@@ -35,24 +35,23 @@ nnoremap <C-h> <C-w><C-h>
 nnoremap ,v <C-w>v
 nnoremap ,h <C-w>s
 
-
 "Tabs mapping
 nnoremap tn :tabnew<Space>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 
 " lightline config
-let g:lightline = {
-    \ 'colorscheme': 'gruvbox'
-    \ }
+ let g:lightline = {
+     \ 'colorscheme': 'PaperColor'
+         \ }
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " Theme config
 set termguicolors     " enable true colors support
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
 set background=dark
+highlight LineNr guifg=white
+highlight Pmenu guibg=brown gui=bold
 
 let g:NERDTreeDirArrows=0
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -86,7 +85,6 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,
 
 " Vundle Plugins
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'morhetz/gruvbox'
 Plugin 'git@github.com:Valloric/YouCompleteMe.git'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree'
@@ -98,6 +96,7 @@ Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'vim-javascript'
+Plugin 'posva/vim-vue'
 
 " Plugins come before this line.
 call vundle#end()
