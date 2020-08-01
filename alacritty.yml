@@ -2,10 +2,10 @@ window:
   dimensions:
     columns: 140
     lines: 38
+  padding:
+    x: 5
+    y: 5
   decorations: full
-scrolling:
-  history: 10000
-  multiplier: 3
 background_opacity: 1.0
 dynamic_title: true
 
@@ -19,17 +19,20 @@ font:
   italic:
     family: Fira Code
     style: Italic
-  size: 13
+  size: 13.5
   offset:
     x: 0
     y: 0
   glyph_offset:
     x: 0
     y: 0
-  use_thin_strokes: false
   debug:
     persistent_logging: false
 draw_bold_text_with_bright_colors: true
+
+scrolling:
+   history: 10000
+   multiplier: 3
 
 cursor:
   style: Block
@@ -37,3 +40,6 @@ cursor:
 
 key_bindings:
   - { key: N,        mods: Command, command: { program: "open", args: ["-n", "/Applications/Alacritty.app"] } }
+  - { key: PageUp,   mods: Shift,   action: ScrollPageUp }
+  - { key: PageDown, mods: Shift,   action: ScrollPageDown }
+  - { key: Back,     mods: Alt,     chars: "\x1b\x7f" }

@@ -3,7 +3,6 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/manosriram/.oh-my-zsh"
-export LC_ALL=en_US.UTF-8
 export TERM="screen-256color"
 export PATH=${PATH}:/usr/local/mysql/bin
 
@@ -58,9 +57,9 @@ alias desk=CD_Desktop
 alias nrd="npm run dev"
 alias gacp=gacp
 alias init=initIgnore
-alias stat="git status"
+alias gss="git status"
 alias gb="git branch"
-alias gc=gitch
+alias k="kubectl"
 
 # TMUX Alias
 alias tm="tmux"

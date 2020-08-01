@@ -52,6 +52,7 @@ set termguicolors     " enable true colors support
 set background=dark
 highlight LineNr guifg=white
 highlight Pmenu guibg=brown gui=bold
+highlight EndOfBuffer ctermfg=white
 
 let g:NERDTreeDirArrows=0
 set rtp+=~/.vim/bundle/Vundle.vim
