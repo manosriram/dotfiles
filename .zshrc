@@ -57,9 +57,13 @@ alias desk=CD_Desktop
 alias nrd="npm run dev"
 alias gacp=gacp
 alias init=initIgnore
-alias gss="git status"
-alias gb="git branch"
 alias k="kubectl"
+
+# Git Aliases.
+alias gss="git status"
+alias gaa="git add ."
+alias gch=gitch
+alias gbb="git branch"
 
 # TMUX Alias
 alias tm="tmux"
