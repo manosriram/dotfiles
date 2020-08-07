@@ -6,6 +6,10 @@ set laststatus=2
 set noswapfile
 set autoread
 set noshowmode
+set belloff=all
+set noerrorbells
+set visualbell
+set t_vb=
 
 if (executable('rg'))
     let g:rg_derive_root = 'true'
@@ -16,9 +20,15 @@ if executable('ag')
     let g:ctrlp_user_command = ' ag %s -l --nocolor -g ""'
 endif
 
-inoremap <expr> <Enter> pumvisible() ? "<Esc>a" : "<Enter>"
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
-set completeopt-=preview
+" COC-Tab Config
+inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 
 map <Enter> o<ESC>
 map <silent> <C-b> :NERDTreeFocus<CR>
@@ -47,11 +57,12 @@ nnoremap tl :tablast<CR>
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 " Theme config
 set termguicolors     " enable true colors support
 set background=dark
 highlight LineNr guifg=white
-highlight Pmenu guibg=brown gui=bold
+highlight Pmenu guibg=#2C3E50 gui=bold
 highlight EndOfBuffer ctermfg=white
 
 let g:NERDTreeDirArrows=0
@@ -86,7 +97,6 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,
 
 " Vundle Plugins
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'git@github.com:Valloric/YouCompleteMe.git'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
@@ -98,6 +108,8 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'vim-javascript'
 Plugin 'posva/vim-vue'
+Plugin 'eslint/eslint'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Plugins come before this line.
 call vundle#end()
