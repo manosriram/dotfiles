@@ -66,7 +66,7 @@ alias gch=gitch
 alias gbb="git branch"
 
 # TMUX Alias
-alias tm="tmux"
+alias tmx="tmux"
 alias tls="tmux ls"
 alias ta=tattach
 alias td=tdetach
@@ -74,6 +74,7 @@ alias tk="tmux kill-server"
 alias tx="exit"
 
 ZSH_THEME="geoffgarside"
+DISABLE_AUTO_TITLE="true"
 plugins=()
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
