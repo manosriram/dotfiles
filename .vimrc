@@ -37,6 +37,8 @@ map ; :Files<CR>
 map / /\v
 map z dd
 
+let mapleader=" "
+
 noremap <Leader>\t :botright vertical terminal
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
@@ -46,7 +48,11 @@ nnoremap ,v <C-w>v
 nnoremap ,h <C-w>s
 
 "Easy-Motion Mappings
-nnoremap f H:call EasyMotion#WB(0, 0)<CR>
+nnoremap <Leader>f H:call EasyMotion#WB(0, 0)<CR>
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
 let g:EasyMotion_smartcase = 1
 
 "Tabs mapping
