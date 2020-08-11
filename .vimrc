@@ -45,6 +45,10 @@ nnoremap <C-h> <C-w><C-h>
 nnoremap ,v <C-w>v
 nnoremap ,h <C-w>s
 
+"Easy-Motion Mappings
+nnoremap f H:call EasyMotion#WB(0, 0)<CR>
+let g:EasyMotion_smartcase = 1
+
 "Tabs mapping
 nnoremap tn :tabnew<Space>
 nnoremap th :tabfirst<CR>
@@ -110,6 +114,7 @@ Plugin 'vim-javascript'
 Plugin 'posva/vim-vue'
 Plugin 'eslint/eslint'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'easymotion/vim-easymotion'
 
 " Plugins come before this line.
 call vundle#end()
