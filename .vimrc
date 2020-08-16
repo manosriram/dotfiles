@@ -37,6 +37,8 @@ map ; :Files<CR>
 map / /\v
 map z dd
 
+colorscheme cinnabar
+
 let mapleader=" "
 
 noremap <Leader>\t :botright vertical terminal
@@ -121,6 +123,8 @@ Plugin 'posva/vim-vue'
 Plugin 'eslint/eslint'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'easymotion/vim-easymotion'
+Plugin 'vimoxide/vim-cinnabar'
+
 
 " Plugins come before this line.
 call vundle#end()
