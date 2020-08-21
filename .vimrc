@@ -80,6 +80,7 @@ highlight LineNr guifg=white
 highlight Pmenu guibg=#2C3E50 gui=bold
 highlight EndOfBuffer ctermfg=white
 
+let g:NERDSpaceDelims = 1
 let g:NERDTreeDirArrows=0
 set rtp+=~/.vim/bundle/Vundle.vim
 set encoding=utf8
