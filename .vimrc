@@ -10,6 +10,7 @@ set belloff=all
 set noerrorbells
 set visualbell
 set t_vb=
+filetype plugin on
 
 if (executable('rg'))
     let g:rg_derive_root = 'true'
@@ -36,6 +37,8 @@ map <silent> <C-n> :NERDTreeToggle<CR>
 map ; :Files<CR>
 map / /\v
 map z dd
+map tvv :vert term<CR>
+map thh :term<CR>
 
 colorscheme cinnabar
 
@@ -120,10 +123,10 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'vim-javascript'
 Plugin 'posva/vim-vue'
-Plugin 'eslint/eslint'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vimoxide/vim-cinnabar'
+Plugin 'preservim/nerdcommenter'
 
 
 " Plugins come before this line.
