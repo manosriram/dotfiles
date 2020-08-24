@@ -40,6 +40,10 @@ map z dd
 map tvv :vert term<CR>
 map thh :term<CR>
 
+nmap <leader>gs :G<CR>
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gu :diffget //2
+
 colorscheme cinnabar
 
 let mapleader=" "
@@ -64,11 +68,6 @@ let g:EasyMotion_smartcase = 1
 nnoremap tn :tabnew<Space>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
-
-" lightline config
- let g:lightline = {
-     \ 'colorscheme': 'PaperColor'
-         \ }
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -121,14 +120,17 @@ Plugin 'prettier/vim-prettier', { 'do': 'npm install' }
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
-Plugin 'itchyny/lightline.vim'
 Plugin 'vim-javascript'
 Plugin 'posva/vim-vue'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vimoxide/vim-cinnabar'
 Plugin 'preservim/nerdcommenter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
+let g:airline_theme='molokai'
 
 " Plugins come before this line.
 call vundle#end()
