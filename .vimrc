@@ -10,6 +10,7 @@ set belloff=all
 set noerrorbells
 set visualbell
 set t_vb=
+set diffopt+=vertical
 filetype plugin on
 
 if (executable('rg'))
@@ -40,13 +41,13 @@ map z dd
 map tvv :vert term<CR>
 map thh :term<CR>
 
-nmap <leader>gs :G<CR>
-nmap <leader>gh :diffget //3<CR>
-nmap <leader>gu :diffget //2
-
 colorscheme cinnabar
 
 let mapleader=" "
+
+nmap <leader>gs :G<CR>
+nmap <leader>gl :diffget //3<CR>
+nmap <leader>gh :diffget //2<CR>
 
 noremap <Leader>\t :botright vertical terminal
 nnoremap <C-j> <C-w><C-j>
