@@ -109,7 +109,7 @@ set timeoutlen=3000
 let g:user_emmet_leader_key=','
 
 " Prettier Config
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+autocmd BufWritePre *.js,*.ts,*.jsx,*.mjs,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " Vundle Plugins
 Plugin 'VundleVim/Vundle.vim'
