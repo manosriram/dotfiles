@@ -12,6 +12,8 @@ set visualbell
 set t_vb=
 set diffopt+=vertical
 filetype plugin on
+set encoding=UTF-8
+
 
 if (executable('rg'))
     let g:rg_derive_root = 'true'
@@ -70,6 +72,9 @@ nnoremap tn :tabnew<Space>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 
+"vim-go config
+let g:go_fmt_autosave=0
+
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
@@ -105,6 +110,7 @@ set nowrap
 set ttimeout
 set ttimeoutlen=50
 set timeoutlen=3000
+set maxmempattern=20000
 
 let g:user_emmet_leader_key=','
 
@@ -130,6 +136,7 @@ Plugin 'preservim/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'fatih/vim-go'
 
 let g:airline_theme='molokai'
 

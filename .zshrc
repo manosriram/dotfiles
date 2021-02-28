@@ -5,6 +5,11 @@
 export ZSH="/Users/manosriram/.oh-my-zsh"
 export TERM="screen-256color"
 export PATH=${PATH}:/usr/local/mysql/bin
+bindkey "^[^[[D" forward-word
+bindkey "^[^[[C" backward-word
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 function cprun() {
     g++ -std=c++14 $1 && ./a.out && cat out.txt
@@ -22,10 +27,8 @@ function tvim() {
     touch $1 && vim $1
 }
 
-function gacp() {
-    git add .;
-    git commit -m $1;
-    git push $2 $3;
+function gp() {
+    git push origin $1;
 }
 
 function initIgnore() {
@@ -40,11 +43,15 @@ function gitch() {
 }
 
 function tattach() {
-    tmux attach-session -t $1
+    tmux attach-session -t $1;
 }
 
 function tdetach() {
-    tmux detach
+    tmux detach;
+}
+
+function tkill() {
+    tmux kill-session -t $1;
 }
 
 # Aliases.
@@ -55,7 +62,6 @@ alias tvim=tvim
 alias cprun=cprun
 alias desk=CD_Desktop
 alias nrd="npm run dev"
-alias gacp=gacp
 alias init=initIgnore
 alias k="kubectl"
 
@@ -72,9 +78,13 @@ alias ta=tattach
 alias td=tdetach
 alias tk="tmux kill-server"
 alias tx="exit"
+alias tn="tmux neww"
+alias gp=gp
+alias tk=tkill
 
 ZSH_THEME="geoffgarside"
 DISABLE_AUTO_TITLE="true"
 plugins=()
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
