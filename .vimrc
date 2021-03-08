@@ -59,6 +59,11 @@ nnoremap <C-h> <C-w><C-h>
 nnoremap ,v <C-w>v
 nnoremap ,h <C-w>s
 
+"vim-go config
+let g:go_fmt_command = "goimports"
+let g:go_auto_type_info = 1
+let g:go_fmt_autosave=0
+
 "Easy-Motion Mappings
 nnoremap <Leader>f H:call EasyMotion#WB(0, 0)<CR>
 map <Leader>l <Plug>(easymotion-lineforward)
@@ -71,9 +76,6 @@ let g:EasyMotion_smartcase = 1
 nnoremap tn :tabnew<Space>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
-
-"vim-go config
-let g:go_fmt_autosave=0
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
