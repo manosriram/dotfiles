@@ -33,6 +33,8 @@ function gpush() {
             echo "mano/dev branch not checked-out";
         fi
     fi
+
+    git checkout mano/dev;
 }
 
 function cprun() {
