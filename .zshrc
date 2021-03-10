@@ -16,7 +16,7 @@ function gpush() {
     branch="$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)";
     if [[ "$dir" = "/Users/manosriram/desktop/apnahood-backend" ]] && [[ "$branch" = "mano/dev" ]]; then
         git add .;
-        git commit $1;
+        git commit -m $1;
         echo "Pushing to mano/dev.";
         git push origin mano/dev;
         echo "Checking out branch mano/remote.";
