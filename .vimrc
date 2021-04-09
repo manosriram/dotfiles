@@ -14,6 +14,13 @@ set diffopt+=vertical
 filetype plugin on
 set encoding=UTF-8
 
+if exists('$TMUX')
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
+else
+    let &t_SI = "\e[5 q"
+    let &t_EI = "\e[2 q"
+endif
 
 if (executable('rg'))
     let g:rg_derive_root = 'true'
@@ -42,6 +49,7 @@ map / /\v
 map z dd
 map tvv :vert term<CR>
 map thh :term<CR>
+au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
 colorscheme cinnabar
 
@@ -59,10 +67,17 @@ nnoremap <C-h> <C-w><C-h>
 nnoremap ,v <C-w>v
 nnoremap ,h <C-w>s
 
-"vim-go config
-let g:go_fmt_command = "goimports"
+"go config
 let g:go_auto_type_info = 1
-let g:go_fmt_autosave=0
+let g:go_imports_mode='gopls'
+au filetype go inoremap <buffer> . .<C-x><C-o>
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:go_def_mapping_enabled = 0
+
+" Open go doc in vertical window, horizontal, or tab
+au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
+au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
+au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
 
 "Easy-Motion Mappings
 nnoremap <Leader>f H:call EasyMotion#WB(0, 0)<CR>
@@ -89,11 +104,10 @@ highlight EndOfBuffer ctermfg=white
 
 let g:NERDSpaceDelims = 1
 let g:NERDTreeDirArrows=0
-set rtp+=~/.vim/bundle/Vundle.vim
 set encoding=utf8
 set t_Co=256
 
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
 hi Visual term=reverse cterm=reverse guibg=White
 let base16colorspace=256
@@ -119,29 +133,27 @@ let g:user_emmet_leader_key=','
 " Prettier Config
 autocmd BufWritePre *.js,*.ts,*.jsx,*.mjs,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
-" Vundle Plugins
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'mattn/emmet-vim'
-Plugin 'prettier/vim-prettier', { 'do': 'npm install' }
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'
-Plugin 'vim-javascript'
-Plugin 'posva/vim-vue'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'easymotion/vim-easymotion'
-Plugin 'vimoxide/vim-cinnabar'
-Plugin 'preservim/nerdcommenter'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'fatih/vim-go'
+" Plugs
+Plug 'VundleVim/Vundle.vim'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'flazz/vim-colorschemes'
+Plug 'mattn/emmet-vim'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'Chiel92/vim-autoformat'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'easymotion/vim-easymotion'
+Plug 'vimoxide/vim-cinnabar'
+Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'fatih/vim-go'
 
 let g:airline_theme='molokai'
 
-" Plugins come before this line.
-call vundle#end()
+" Plugs come before this line.
+call plug#end()
 filetype plugin indent on
