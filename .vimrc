@@ -71,7 +71,6 @@ let g:go_auto_type_info = 1
 let g:go_imports_mode='gopls'
 au filetype go inoremap <buffer> . .<C-x><C-o>
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-let g:go_def_mapping_enabled = 0
 
 " Open go doc in vertical window, horizontal, or tab
 au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
@@ -101,8 +100,6 @@ highlight LineNr guifg=white
 highlight Pmenu guibg=#2C3E50 gui=bold
 highlight EndOfBuffer ctermfg=white
 set bg=dark
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
 
 let g:NERDSpaceDelims = 1
 let g:NERDTreeDirArrows=0
@@ -153,7 +150,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go'
 Plug 'morhetz/gruvbox'
 
-let g:airline_theme='gruvbox'
+let g:airline_theme='minimalist'
 
 " Plugs come before this line.
 call plug#end()
