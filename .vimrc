@@ -51,7 +51,6 @@ map tvv :vert term<CR>
 map thh :term<CR>
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
-colorscheme cinnabar
 
 let mapleader=" "
 
@@ -101,6 +100,9 @@ set background=dark
 highlight LineNr guifg=white
 highlight Pmenu guibg=#2C3E50 gui=bold
 highlight EndOfBuffer ctermfg=white
+set bg=dark
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
 
 let g:NERDSpaceDelims = 1
 let g:NERDTreeDirArrows=0
@@ -134,7 +136,6 @@ let g:user_emmet_leader_key=','
 autocmd BufWritePre *.js,*.ts,*.jsx,*.mjs,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " Plugs
-Plug 'VundleVim/Vundle.vim'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'flazz/vim-colorschemes'
@@ -143,16 +144,16 @@ Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'Chiel92/vim-autoformat'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'master' }
 Plug 'easymotion/vim-easymotion'
-Plug 'vimoxide/vim-cinnabar'
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go'
+Plug 'morhetz/gruvbox'
 
-let g:airline_theme='molokai'
+let g:airline_theme='gruvbox'
 
 " Plugs come before this line.
 call plug#end()
