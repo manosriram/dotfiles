@@ -66,6 +66,13 @@ nnoremap <C-h> <C-w><C-h>
 nnoremap ,v <C-w>v
 nnoremap ,h <C-w>s
 
+"colorscheme config
+colorscheme distinguished
+
+let g:airline#extensions#tmuxline#enabled = 1
+" start tmuxline even without vim running
+let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
+
 "go config
 let g:go_auto_type_info = 1
 let g:go_imports_mode='gopls'
@@ -95,11 +102,9 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Theme config
 set termguicolors     " enable true colors support
-set background=dark
 highlight LineNr guifg=white
 highlight Pmenu guibg=#2C3E50 gui=bold
 highlight EndOfBuffer ctermfg=white
-set bg=dark
 
 let g:NERDSpaceDelims = 1
 let g:NERDTreeDirArrows=0
@@ -148,7 +153,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go'
-Plug 'morhetz/gruvbox'
+Plug 'edkolev/tmuxline.vim'
 
 let g:airline_theme='minimalist'
 
