@@ -75,7 +75,8 @@ let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
 
 "go config
 let g:go_auto_type_info = 1
-let g:go_imports_mode='gopls'
+" let g:go_imports_mode='gopls'
+let g:go_gopls_enabled = 0
 au filetype go inoremap <buffer> . .<C-x><C-o>
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
@@ -138,22 +139,16 @@ let g:user_emmet_leader_key=','
 " autocmd BufWritePre *.js,*.ts,*.jsx,*.mjs,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " Plugs
-Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'flazz/vim-colorschemes'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'mattn/emmet-vim'
 Plug 'Chiel92/vim-autoformat'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'master' }
 Plug 'easymotion/vim-easymotion'
 Plug 'preservim/nerdcommenter'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go'
-Plug 'edkolev/tmuxline.vim'
 
 let g:airline_theme='minimalist'
 
