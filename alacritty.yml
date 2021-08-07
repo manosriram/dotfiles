@@ -19,7 +19,7 @@ font:
   italic:
     family: Fira Code
     style: Italic
-  size: 13.5
+  size: 11
   offset:
     x: 0
     y: 0
@@ -71,3 +71,5 @@ key_bindings:
   - { key: PageUp,   mods: Shift,   action: ScrollPageUp }
   - { key: PageDown, mods: Shift,   action: ScrollPageDown }
   - { key: Back,     mods: Alt,     chars: "\x1b\x7f" }
+  - { key: Right, mods: Alt, chars: "\x1BF" }
+  - { key: Left,  mods: Alt, chars: "\x1BB" }

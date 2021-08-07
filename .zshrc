@@ -5,37 +5,15 @@
 export ZSH="/Users/manosriram/.oh-my-zsh"
 export TERM="screen-256color"
 export PATH=${PATH}:/usr/local/mysql/bin
+export GOPATH=$HOME/go
+export GOBIN=/usr/local/bin
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export GO111MODULE=off
 bindkey "^[^[[D" forward-word
 bindkey "^[^[[C" backward-word
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-function gpush() {
-    dir="$(pwd)";
-    branch="$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)";
-    if [[ "$dir" = "/Users/manosriram/desktop/apnahood-backend" ]] && [[ "$branch" = "mano/dev" ]]; then
-        git add .;
-        git commit -m $1;
-        echo "Pushing to mano/dev.";
-        git push origin mano/dev;
-        echo "Checking out branch mano/remote.";
-        git checkout mano/remote;
-        echo "Merging mano/remote with mano/dev.";
-        git merge mano/dev;
-        echo "Pushing mano/remote and deploying.";
-        git push origin mano/remote;
-    else
-        if [[ "$dir" != "/Users/manosriram/desktop/apnahood-backend" ]]; then
-            echo "Not in apnahood directory";
-        fi
-        if [[ "$branch" != "mano/dev" ]]; then
-            echo "mano/dev branch not checked-out";
-        fi
-    fi
-
-    git checkout mano/dev;
-}
 
 function cprun() {
     g++ -std=c++14 $1 && ./a.out && cat out.txt
@@ -80,6 +58,10 @@ function tkill() {
     tmux kill-session -t $1;
 }
 
+function pret() {
+    prettier --config .prettierrc --write './Source/assets/js/core/source/*.js'
+}
+
 # Aliases.
 alias lst="ls -l"
 alias lsta="ls -a -l"
@@ -90,13 +72,15 @@ alias desk=CD_Desktop
 alias nrd="npm run dev"
 alias init=initIgnore
 alias k="kubectl"
+alias goo="cd $GOPATH/src"
+alias mvim="~/mvim.sh"
+alias c="clear"
 
 # Git Aliases.
 alias gss="git status"
 alias gaa="git add ."
 alias gch=gitch
 alias gbb="git branch"
-alias gps=gpush
 
 # TMUX Alias
 alias tmx="tmux"

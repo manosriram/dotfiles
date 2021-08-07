@@ -69,7 +69,7 @@ nnoremap ,h <C-w>s
 "colorscheme config
 colorscheme distinguished
 
-let g:airline#extensions#tmuxline#enabled = 1
+let g:airline#extensions#tmuxline#enabled = 0
 " start tmuxline even without vim running
 let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
 
@@ -135,14 +135,14 @@ set maxmempattern=20000
 let g:user_emmet_leader_key=','
 
 " Prettier Config
-autocmd BufWritePre *.js,*.ts,*.jsx,*.mjs,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+" autocmd BufWritePre *.js,*.ts,*.jsx,*.mjs,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " Plugs
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'flazz/vim-colorschemes'
-Plug 'mattn/emmet-vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'mattn/emmet-vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
