@@ -4,6 +4,7 @@
 # Path to your oh-my-zsh installation.
 # ZSH_THEME="wedisagree"
 export ZSH="/Users/manosriram/.oh-my-zsh"
+ZSH_THEME="bureau"
 export TERM="screen-256color"
 export PATH=${PATH}:/usr/local/mysql/bin
 export GOPATH=$HOME/go
