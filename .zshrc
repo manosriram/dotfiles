@@ -10,6 +10,7 @@ export GOPATH=$HOME/go
 export GOBIN=/usr/local/bin
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export GO111MODULE=off
+set KEYTIMEOUT=1
 bindkey "^[^[[D" forward-word
 bindkey "^[^[[C" backward-word
 
