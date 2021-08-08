@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+# ZSH_THEME="wedisagree"
 export ZSH="/Users/manosriram/.oh-my-zsh"
 export TERM="screen-256color"
 export PATH=${PATH}:/usr/local/mysql/bin
@@ -93,7 +94,6 @@ alias tn="tmux neww"
 alias gp=gp
 alias tk=tkill
 
-ZSH_THEME="geoffgarside"
 DISABLE_AUTO_TITLE="true"
 plugins=()
 source $ZSH/oh-my-zsh.sh
