@@ -10,6 +10,7 @@ export PATH=${PATH}:/usr/local/mysql/bin
 export GOPATH=$HOME/go
 export GOBIN=/usr/local/bin
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export HOMEBREW_NO_AUTO_UPDATE=1
 export GO111MODULE=off
 set KEYTIMEOUT=1
 bindkey "^[^[[D" forward-word
