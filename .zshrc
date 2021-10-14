@@ -7,11 +7,12 @@ export ZSH="/Users/manosriram/.oh-my-zsh"
 ZSH_THEME="bureau"
 export TERM="screen-256color"
 export PATH=${PATH}:/usr/local/mysql/bin
+export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
-export GOBIN=/usr/local/bin
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export GOBIN=/usr/local/go/bin
+# export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export HOMEBREW_NO_AUTO_UPDATE=1
-export GO111MODULE=off
+export GO111MODULE=on
 set KEYTIMEOUT=1
 bindkey "^[^[[D" forward-word
 bindkey "^[^[[C" backward-word
