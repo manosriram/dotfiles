@@ -31,6 +31,11 @@ if executable('ag')
     let g:ctrlp_user_command = ' ag %s -l --nocolor -g ""'
 endif
 
+"j, k to scroll autocomplete results
+inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
+inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
+set guicursor+=n:hor10-Cursor/lCursor
+
 " COC-Tab Config
 inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
@@ -50,7 +55,6 @@ map z dd
 map tvv :vert term<CR>
 map thh :term<CR>
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
-
 
 let mapleader=" "
 
@@ -76,9 +80,11 @@ let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
 "go config
 let g:go_auto_type_info = 1
 " let g:go_imports_mode='gopls'
-let g:go_gopls_enabled = 0
+let g:go_gopls_enabled = 1
 au filetype go inoremap <buffer> . .<C-x><C-o>
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:go_info_mode='guru'
+let g:go_auto_type_info='gopls'
 
 " Open go doc in vertical window, horizontal, or tab
 au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
@@ -128,10 +134,12 @@ set relativenumber
 set incsearch
 set noerrorbells
 set nowrap
-set ttimeout
-set ttimeoutlen=50
-set timeoutlen=3000
 set maxmempattern=20000
+set ttimeout
+set ttimeoutlen=100
+set timeoutlen=3000
+set noesckeys
+
 
 let g:user_emmet_leader_key=','
 
@@ -144,13 +152,13 @@ Plug 'flazz/vim-colorschemes'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'mattn/emmet-vim'
 Plug 'Chiel92/vim-autoformat'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'master' }
 Plug 'easymotion/vim-easymotion'
 Plug 'preservim/nerdcommenter'
 Plug 'fatih/vim-go'
-
-let g:airline_theme='minimalist'
+Plug 'davidhalter/jedi-vim'
 
 " Plugs come before this line.
 call plug#end()
