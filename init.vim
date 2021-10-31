@@ -70,8 +70,8 @@ nnoremap <Leader>b :Buffers<CR>
 
 "colorscheme config
 colorscheme distinguished
-
-let g:airline#extensions#tmuxline#enabled = 0
+let g:airline_theme='serene'
+let g:airline#extensions#tmuxline#enabled = 1
 " start tmuxline even without vim running
 let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
 
@@ -123,6 +123,7 @@ set termguicolors     " enable true colors support
 highlight LineNr guifg=white
 highlight Pmenu guibg=#2C3E50 gui=bold
 highlight EndOfBuffer ctermfg=white
+highlight Cursor guifg=white guibg=black
 
 let g:NERDSpaceDelims = 1
 let g:NERDTreeDirArrows=0
@@ -170,6 +171,9 @@ Plug 'preservim/nerdcommenter'
 Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
 Plug 'voldikss/vim-floaterm'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-surround'
 
 " Plugs come before this line.
 call plug#end()
