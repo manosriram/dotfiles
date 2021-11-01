@@ -70,7 +70,7 @@ nnoremap <Leader>b :Buffers<CR>
 
 "colorscheme config
 colorscheme distinguished
-let g:airline_theme='serene'
+let g:airline_theme='minimalist'
 let g:airline#extensions#tmuxline#enabled = 1
 " start tmuxline even without vim running
 let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
@@ -86,8 +86,6 @@ let g:go_auto_type_info='gopls'
 " Open go doc in vertical window, horizontal, or tab
 au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
 au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
-au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
-au Filetype go nnoremap <leader>n :tab next <CR>:exe "GoDef"<CR>
 
 "Easy-Motion Mappings
 nnoremap <Leader>f H:call EasyMotion#WB(0, 0)<CR>
@@ -153,6 +151,9 @@ set ttimeoutlen=100
 set timeoutlen=3000
 
 let g:user_emmet_leader_key=','
+
+" Prettier Config
+" autocmd BufWritePre *.js,*.ts,*.jsx,*.mjs,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " Plugs
 Plug 'scrooloose/nerdtree'
