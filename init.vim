@@ -13,6 +13,7 @@ set visualbell
 set t_vb=
 filetype plugin on
 set encoding=UTF-8
+set bg=dark
 
 if exists('$TMUX')
     let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
@@ -67,9 +68,10 @@ nnoremap ,h <C-w>s
 nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
 nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
 nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>m :TagbarOpen<CR>
 
 "colorscheme config
-colorscheme distinguished
+colorscheme jellyx
 let g:airline_theme='minimalist'
 let g:airline#extensions#tmuxline#enabled = 1
 " start tmuxline even without vim running
@@ -122,9 +124,13 @@ highlight LineNr guifg=white
 highlight Pmenu guibg=#2C3E50 gui=bold
 highlight EndOfBuffer ctermfg=white
 highlight Cursor guifg=white guibg=black
+:hi Directory guifg=#00000 ctermfg=white
 
+"NerdTree Config
 let g:NERDSpaceDelims = 1
-let g:NERDTreeDirArrows=0
+let g:NERDTreeDirArrows = 0
+let NERDTreeDirArrowExpandable = ">>"
+let NERDTreeDirArrowCollapsible = "<<"
 set encoding=utf8
 set t_Co=256
 
@@ -154,7 +160,7 @@ let g:user_emmet_leader_key=','
 
 " Prettier Config
 " autocmd BufWritePre *.js,*.ts,*.jsx,*.mjs,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-
+"
 " Plugs
 Plug 'scrooloose/nerdtree'
 Plug 'flazz/vim-colorschemes'
@@ -172,6 +178,8 @@ Plug 'voldikss/vim-floaterm'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
+Plug 'Pocco81/Catppuccino.nvim'
+Plug 'preservim/tagbar'
 
 " Plugs come before this line.
 call plug#end()
