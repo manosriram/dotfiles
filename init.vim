@@ -71,7 +71,8 @@ nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>m :TagbarOpen<CR>
 
 "colorscheme config
-colorscheme jellyx
+colorscheme vim-cinnabar
+
 let g:airline_theme='minimalist'
 let g:airline#extensions#tmuxline#enabled = 1
 " start tmuxline even without vim running
@@ -124,13 +125,13 @@ highlight LineNr guifg=white
 highlight Pmenu guibg=#2C3E50 gui=bold
 highlight EndOfBuffer ctermfg=white
 highlight Cursor guifg=white guibg=black
-:hi Directory guifg=#00000 ctermfg=white
+highlight Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
+hi Directory guifg=#00000 ctermfg=white
 
 "NerdTree Config
 let g:NERDSpaceDelims = 1
 let g:NERDTreeDirArrows = 0
-let NERDTreeDirArrowExpandable = ">>"
-let NERDTreeDirArrowCollapsible = "<<"
+let NERDTreeDirArrowExpandable = "~"
 set encoding=utf8
 set t_Co=256
 
@@ -178,7 +179,6 @@ Plug 'voldikss/vim-floaterm'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
-Plug 'Pocco81/Catppuccino.nvim'
 Plug 'preservim/tagbar'
 
 " Plugs come before this line.
