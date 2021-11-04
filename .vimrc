@@ -70,8 +70,8 @@ nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
 nnoremap <Leader>b :Buffers<CR>
 
 "colorscheme config
-let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
+colorscheme ghostbuster
+highlight Pmenu ctermbg=gray guibg=gray
 
 let g:airline#extensions#tmuxline#enabled = 0
 " start tmuxline even without vim running
@@ -92,12 +92,11 @@ au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
 au Filetype go nnoremap <leader>n :tab next <CR>:exe "GoDef"<CR>
 
 "Easy-Motion Mappings
-" nnoremap <Leader>f H:call EasyMotion#WB(0, 0)()<CR>
-" map <Leader>l <Plug>(easymotion-lineforward)
-" map <Leader>j <Plug>(easymotion-j)
-" map <Leader>k <Plug>(easymotion-k)
-" map <Leader>h <Plug>(easymotion-linebackward)
-map <Leader>f H<Leader><Leader>w
+nnoremap <Leader>f H:call EasyMotion#WB(0, 0)()<CR>
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
