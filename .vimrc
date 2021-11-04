@@ -111,16 +111,6 @@ nnoremap tl :tabnext<CR>
 set guicursor=i:hor25-iCursor
 set guicursor+=n:block-Cursor/lCursor
 
-"Floaterm settings
-let g:floaterm_width = 0.99
-let g:floaterm_height = 0.99
-let g:floaterm_keymap_new = '<Leader>n'
-let g:floaterm_keymap_toggle = '<Leader>t'
-let g:floaterm_keymap_next = '<Leader>k'
-let g:floaterm_keymap_prev = '<Leader>j'
-hi Floaterm guibg=black
-hi FloatermBorder guibg=white guifg=black
-
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
@@ -175,7 +165,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'preservim/nerdcommenter'
 Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
-Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-surround'
 Plug 'preservim/tagbar'
 Plug 'morhetz/gruvbox'
