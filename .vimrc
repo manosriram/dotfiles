@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved, required
+
 filetype off                  " required
 syntax on
 set number
@@ -10,9 +11,9 @@ set belloff=all
 set noerrorbells
 set visualbell
 set t_vb=
-set diffopt+=vertical
 filetype plugin on
 set encoding=UTF-8
+set bg=dark
 
 if exists('$TMUX')
     let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
@@ -30,11 +31,6 @@ let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 if executable('ag')
     let g:ctrlp_user_command = ' ag %s -l --nocolor -g ""'
 endif
-
-"j, k to scroll autocomplete results
-inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
-inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
-set guicursor+=n:hor10-Cursor/lCursor
 
 " COC-Tab Config
 inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -69,9 +65,13 @@ nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
 nnoremap ,v <C-w>v
 nnoremap ,h <C-w>s
+nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
+nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
+nnoremap <Leader>b :Buffers<CR>
 
 "colorscheme config
-colorscheme distinguished
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
 
 let g:airline#extensions#tmuxline#enabled = 0
 " start tmuxline even without vim running
@@ -81,7 +81,6 @@ let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
 let g:go_auto_type_info = 1
 " let g:go_imports_mode='gopls'
 let g:go_gopls_enabled = 1
-au filetype go inoremap <buffer> . .<C-x><C-o>
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:go_info_mode='guru'
 let g:go_auto_type_info='gopls'
@@ -90,19 +89,37 @@ let g:go_auto_type_info='gopls'
 au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
 au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
 au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
+au Filetype go nnoremap <leader>n :tab next <CR>:exe "GoDef"<CR>
 
 "Easy-Motion Mappings
-nnoremap <Leader>f H:call EasyMotion#WB(0, 0)<CR>
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
+" nnoremap <Leader>f H:call EasyMotion#WB(0, 0)()<CR>
+" map <Leader>l <Plug>(easymotion-lineforward)
+" map <Leader>j <Plug>(easymotion-j)
+" map <Leader>k <Plug>(easymotion-k)
+" map <Leader>h <Plug>(easymotion-linebackward)
+map <Leader>f H<Leader><Leader>w
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
 let g:EasyMotion_smartcase = 1
 
 "Tabs mapping
-nnoremap tn :tabnew<Space>
-nnoremap th :tabfirst<CR>
-nnoremap tl :tablast<CR>
+nnoremap tn :tabnew<CR>
+nnoremap tp :tabprev<CR>
+nnoremap tl :tabnext<CR>
+
+set guicursor=i:hor25-iCursor
+set guicursor+=n:block-Cursor/lCursor
+
+"Floaterm settings
+let g:floaterm_width = 0.99
+let g:floaterm_height = 0.99
+let g:floaterm_keymap_new = '<Leader>n'
+let g:floaterm_keymap_toggle = '<Leader>t'
+let g:floaterm_keymap_next = '<Leader>k'
+let g:floaterm_keymap_prev = '<Leader>j'
+hi Floaterm guibg=black
+hi FloatermBorder guibg=white guifg=black
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -126,6 +143,7 @@ let base16colorspace=256
 set backspace=indent,eol,start
 set tabstop=4
 set softtabstop=4 noexpandtab
+
 set shiftwidth=4
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set splitbelow
@@ -138,8 +156,6 @@ set maxmempattern=20000
 set ttimeout
 set ttimeoutlen=100
 set timeoutlen=3000
-set noesckeys
-
 
 let g:user_emmet_leader_key=','
 
@@ -159,6 +175,10 @@ Plug 'easymotion/vim-easymotion'
 Plug 'preservim/nerdcommenter'
 Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
+Plug 'voldikss/vim-floaterm'
+Plug 'tpope/vim-surround'
+Plug 'preservim/tagbar'
+Plug 'morhetz/gruvbox'
 
 " Plugs come before this line.
 call plug#end()
