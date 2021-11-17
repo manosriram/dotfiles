@@ -76,7 +76,9 @@ nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
 
 "vim-sneak
 let g:sneak#label = 1
-let g:sneak#target_labels="abcdefghijklmnopqrstuvwxyz1234567890,./'[]"
+let g:sneak#target_labels="abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQSTUVWXYZ,./;'[]-={}<>?:\""
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S
 
 " fzf.vim
 let g:fzf_layout = { 'down': '~40%' }
@@ -85,10 +87,7 @@ map ;w :Windows<CR>
 
 "colorscheme
 colorscheme distinguished
-
-let g:airline#extensions#tmuxline#enabled = 0
-" start tmuxline even without vim running
-let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
+let g:lightline = {'colorscheme': '16color'}
 
 "go
 let g:go_auto_type_info = 1
@@ -140,6 +139,7 @@ Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
 Plug 'tpope/vim-surround'
 Plug 'justinmk/vim-sneak'
+Plug 'itchyny/lightline.vim'
 
 " Plugs come before this line.
 call plug#end()
