@@ -87,7 +87,7 @@ map ;w :Windows<CR>
 
 "colorscheme
 colorscheme distinguished
-let g:lightline = {'colorscheme': '16color'}
+let g:lightline = {'colorscheme': 'ayu_dark'}
 
 "go
 let g:go_auto_type_info = 1
