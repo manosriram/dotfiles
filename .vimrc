@@ -76,18 +76,19 @@ nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
 
 "vim-sneak
 let g:sneak#label = 1
-let g:sneak#target_labels="abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQSTUVWXYZ,./;'[]-={}<>?:\""
+let g:sneak#target_labels="bcdefgmnopqrstuvwyz123456789BCDEFGHIJKLMNOPQSTUVWXYZ,./;'[]-={}<>?:\""
 map f <Plug>Sneak_s
 map F <Plug>Sneak_S
 
 " fzf.vim
 let g:fzf_layout = { 'down': '~40%' }
+map ;b :Buffers<CR>
 map ;f :Files<CR>
 map ;w :Windows<CR>
 
 "colorscheme
 colorscheme distinguished
-let g:lightline = {'colorscheme': '16color'}
+let g:lightline = {'colorscheme': 'simpleblack'}
 
 "go
 let g:go_auto_type_info = 1
