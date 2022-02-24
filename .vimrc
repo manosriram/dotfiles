@@ -74,6 +74,18 @@ nnoremap ,h <C-w>s
 nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
 nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
 
+"git-fugitive
+map ;gs :G status<CR> 
+map ;gd :G diff<CR>
+map ;ga :G add 
+map ;gc :G commit<CR>
+map ;gr :G restore 
+map ;gl :G log<CR>
+map ;gb :G blame<CR>
+" Open a split of previous commit version of the current buffer
+map ;go :Gsplit HEAD~1:%<CR>
+map ;G :G<CR>
+
 "vim-sneak
 let g:sneak#label = 1
 let g:sneak#target_labels="bcdefgmnopqrstuvwyz123456789BCDEFGHIJKLMNOPQSTUVWXYZ,./;'[]-={}<>?:\""
@@ -141,6 +153,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'tpope/vim-surround'
 Plug 'justinmk/vim-sneak'
 Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'
 
 " Plugs come before this line.
 call plug#end()
