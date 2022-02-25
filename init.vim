@@ -53,6 +53,9 @@ else
   set signcolumn=yes
 endif
 
+nmap f <Plug>Lightspeed_s
+nmap F <Plug>Lightspeed_S
+
 " Disable 'K' for go-doc
 let g:go_doc_keywordprg_enabled = 0
 
