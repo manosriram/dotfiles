@@ -18,4 +18,3 @@ nrmap("f", "<Plug>Lightspeed_s")
 nrmap("F", "<Plug>Lightspeed_S")
 nmap("tvv", ":FloatermNew --width=0.5 --wintype=vsplit<CR>")
 nmap("thh", ":FloatermNew --width=0.5 --wintype=split<CR>")
-

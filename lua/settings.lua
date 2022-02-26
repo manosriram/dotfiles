@@ -69,14 +69,15 @@ cmd([[
         highlight EndOfBuffer ctermfg=white
 ]])
 
+g.go_doc_keywordprg_enabled = 0
 g.go_auto_type_info = 1
-g.go_imports_mode = 'gopls'
+g.to_imports_mode = 'gopls'
 g.go_gopls_enabled = 1
 g.ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 g.go_info_mode = 'guru'
 g.go_auto_type_info = 'gopls'
 g.NERDSpaceDelims = 1
 g.NERDTreeDirArrows = 0
-g.asduser_emmet_leader_key=','
+g.user_emmet_leader_key=','
 vim.api.nvim_set_keymap("n", "F", "<Plug>Lightspeed_S", { noremap = false, silent = true })
 vim.cmd("let g:lightline = {'colorscheme': 'simpleblack'}")
