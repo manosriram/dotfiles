@@ -34,5 +34,11 @@ require('packer').startup(function ()
     use 'tpope/vim-surround'
     use 'itchyny/lightline.vim'
     use 'ggandor/lightspeed.nvim'
-    use 'voldikss/vim-floaterm'
+    use 'rhysd/git-messenger.vim'
+    use {
+    'numToStr/Navigator.nvim',
+    config = function()
+        require('Navigator').setup()
+    end
+   }
 end)
