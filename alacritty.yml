@@ -6,7 +6,7 @@ window:
     x: 5
     y: 5
   decorations: full
-background_opacity: 1.0
+  opacity: 1.0
 window.dynamic_title: true
 
 font:
