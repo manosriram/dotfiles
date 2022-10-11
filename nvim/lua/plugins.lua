@@ -34,6 +34,11 @@ require('packer').startup(function ()
     use 'itchyny/lightline.vim'
     use 'ggandor/lightspeed.nvim'
     use 'rhysd/git-messenger.vim'
+    use 'mfussenegger/nvim-dap'
+    use 'leoluz/nvim-dap-go'
+    use 'rcarriga/nvim-dap-ui'
+    use 'theHamsta/nvim-dap-virtual-text'
+    use 'nvim-telescope/telescope-dap.nvim'
     use {
     'numToStr/Navigator.nvim',
     config = function()
