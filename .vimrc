@@ -91,10 +91,6 @@ highlight LineNr guifg=white
 highlight EndOfBuffer ctermfg=white
 " hi CocMenuSel ctermbg=grey guibg=black
 
-"easymotion
-map <Leader>f <Leader><Leader>f
-map <Leader>F <Leader><Leader>F
-
 " fzf.vim
 map ;b :Buffers<CR>
 map ;f :Files<CR>
@@ -159,7 +155,6 @@ Plug 'preservim/nerdcommenter'
 Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
 Plug 'itchyny/lightline.vim'
-Plug 'easymotion/vim-easymotion'
 
 " Plugs come before this line.
 call plug#end()
