@@ -16,7 +16,9 @@ set encoding=UTF-8
 set bg=dark
 
 hi Visual term=reverse cterm=reverse guibg=White
-let base16colorspace=256
+set hlsearch
+hi Search ctermbg=LightYellow
+hi Search ctermfg=Red
 
 set backspace=indent,eol,start
 set tabstop=4
@@ -35,7 +37,6 @@ set ttimeout
 set ttimeoutlen=100
 set timeoutlen=3000
 
-
 if exists('$TMUX')
     let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
     let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
@@ -45,8 +46,8 @@ else
 endif
 
 " COC-Tab Config
-inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
+" inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+" inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
 if has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
   set signcolumn=number
@@ -74,39 +75,41 @@ nnoremap ,h <C-w>s
 nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
 nnoremap <C-e> :set nomore <Bar> :ls <Bar> :set more <CR>:b<Space>
 
-"git-fugitive
-map ;gs :G status<CR> 
-map ;gd :G diff<CR>
-map ;ga :G add 
-map ;gc :G commit<CR>
-map ;gr :G restore 
-map ;gl :G log<CR>
-map ;gb :G blame<CR>
-" Open a split of previous commit version of the current buffer
-map ;go :Gsplit HEAD~1:%<CR>
-map ;G :G<CR>
+" coc-autocomplete dropdown config
+inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+inoremap <expr><C-j> coc#pum#visible() ? coc#pum#next(1) : "\<C-h>"
+inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
+inoremap <silent><expr> <C-x><C-o> coc#refresh()
 
-"vim-sneak
-let g:sneak#label = 1
-let g:sneak#target_labels="bcdefgmnopqrstuvwyz123456789BCDEFGHIJKLMNOPQSTUVWXYZ,./;'[]-={}<>?:\""
-map f <Plug>Sneak_s
-map F <Plug>Sneak_S
+hi Visual cterm=NONE ctermbg=0 ctermfg=NONE
+hi Search cterm=NONE ctermbg=0 ctermfg=grey
+" hi Pmenu cterm=NONE ctermbg=white ctermfg=0
+hi MatchParen cterm=NONE ctermbg=NONE ctermfg=green
+
+highlight LineNr guifg=white
+" highlight Pmenu guibg=red gui=bold
+highlight EndOfBuffer ctermfg=white
+" hi CocMenuSel ctermbg=grey guibg=black
+
+"easymotion
+map <Leader>f <Leader><Leader>f
+map <Leader>F <Leader><Leader>F
 
 " fzf.vim
-let g:fzf_layout = { 'down': '~40%' }
 map ;b :Buffers<CR>
 map ;f :Files<CR>
 map ;w :Windows<CR>
 
 "colorscheme
-colorscheme distinguished
+" colorscheme gruvbox
+" let g:gruvbox_contrast_dark = 'hard'
+colorscheme jellybeans
 let g:lightline = {'colorscheme': 'simpleblack'}
 
 "go
 let g:go_auto_type_info = 1
 " let g:go_imports_mode='gopls'
 let g:go_gopls_enabled = 1
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:go_info_mode='guru'
 let g:go_auto_type_info='gopls'
 
@@ -119,19 +122,24 @@ nnoremap <Leader>x :tabclose<CR>
 set guicursor=i:hor25-iCursor
 set guicursor+=n:block-Cursor/lCursor
 
+let &t_SI = "\e[3 q"
+let &t_EI = "\e[2 q"
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Theme
 set termguicolors     " enable true colors support
-highlight LineNr guifg=white
-highlight Pmenu guibg=#2C3E50 gui=bold
-highlight EndOfBuffer ctermfg=white
+set guicursor=i:hor25-iCursor
+set guicursor+=n:block-Cursor/lCursor
+hi Visual term=reverse cterm=reverse guibg=White
+let base16colorspace=256
+set backspace=indent,eol,start
+set tabstop=4
+set softtabstop=4 noexpandtab
 
 " NerdTree
 let g:NERDSpaceDelims = 1
 let g:NERDTreeDirArrows=0
-set encoding=utf8
 set t_Co=256
 
 call plug#begin('~/.vim/plugged')
@@ -150,10 +158,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'master' }
 Plug 'preservim/nerdcommenter'
 Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
-Plug 'tpope/vim-surround'
-Plug 'justinmk/vim-sneak'
 Plug 'itchyny/lightline.vim'
-Plug 'tpope/vim-fugitive'
+Plug 'easymotion/vim-easymotion'
 
 " Plugs come before this line.
 call plug#end()
