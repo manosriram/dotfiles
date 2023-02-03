@@ -25,6 +25,7 @@ nrmap("f", "<Plug>Lightspeed_s")
 nrmap("F", "<Plug>Lightspeed_S")
 nmap("gm", ":GitMessenger<CR>")
 nmap("gc", ":GitMessengerClose<CR>")
+nmap("gd", ":call CocActionAsync('jumpDefinition')<CR>")
 nmap("mm", ":b#<CR>")
 
 map('n', "<C-h>", '<CMD>NavigatorLeft<CR>')
