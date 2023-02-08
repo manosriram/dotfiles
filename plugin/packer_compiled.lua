@@ -80,11 +80,6 @@ _G.packer_plugins = {
     path = "/Users/manosriram/.local/share/nvim/site/pack/packer/start/Navigator.nvim",
     url = "https://github.com/numToStr/Navigator.nvim"
   },
-  ["coc.nvim"] = {
-    loaded = true,
-    path = "/Users/manosriram/.local/share/nvim/site/pack/packer/start/coc.nvim",
-    url = "https://github.com/neoclide/coc.nvim"
-  },
   ["emmet-vim"] = {
     loaded = true,
     path = "/Users/manosriram/.local/share/nvim/site/pack/packer/start/emmet-vim",
@@ -169,11 +164,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/manosriram/.local/share/nvim/site/pack/packer/start/vim-go",
     url = "https://github.com/fatih/vim-go"
-  },
-  ["vim-prettier"] = {
-    loaded = true,
-    path = "/Users/manosriram/.local/share/nvim/site/pack/packer/start/vim-prettier",
-    url = "https://github.com/prettier/vim-prettier"
   },
   ["vim-surround"] = {
     loaded = true,

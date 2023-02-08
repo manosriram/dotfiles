@@ -22,18 +22,10 @@ require('dap-go').setup()
 require('packer').startup(function ()
 		use 'scrooloose/nerdtree'
 		use 'flazz/vim-colorschemes'
-		use {
-				'prettier/vim-prettier',
-				run = 'npm install',
-		}
 		use 'mattn/emmet-vim'
 		use 'Chiel92/vim-autoformat'
 		use { 'junegunn/fzf',  dir = '~/.fzf', run = './install --all' }
 		use 'junegunn/fzf.vim'
-		use { 'neoclide/coc.nvim', branch = 'release' }
-		-- use 'nvim-telescope/telescope.nvim'
-		-- use 'nvim-lua/popup.nvim'
-		-- use 'nvim-lua/plenary.nvim'
 
 		use 'mfussenegger/nvim-dap'
 		use 'leoluz/nvim-dap-go'
