@@ -47,6 +47,9 @@ require('packer').startup(function ()
 		-- use "https://github.com/mfussenegger/nvim-dap"
 		use { 'puremourning/vimspector' }
 		use "https://github.com/rcarriga/nvim-dap-ui"
+		use { 'mbbill/undotree' }
+		use 'nvim-lua/plenary.nvim'
+		use 'theprimeagen/harpoon'
 		use {
 				'numToStr/Navigator.nvim',
 				config = function()

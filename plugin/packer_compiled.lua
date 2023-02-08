@@ -100,6 +100,11 @@ _G.packer_plugins = {
     path = "/Users/manosriram/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
+  harpoon = {
+    loaded = true,
+    path = "/Users/manosriram/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/theprimeagen/harpoon"
+  },
   ["lightline.vim"] = {
     loaded = true,
     path = "/Users/manosriram/.local/share/nvim/site/pack/packer/start/lightline.vim",
@@ -139,6 +144,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/manosriram/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
     url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/manosriram/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  undotree = {
+    loaded = true,
+    path = "/Users/manosriram/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
   },
   ["vim-autoformat"] = {
     loaded = true,

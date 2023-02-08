@@ -21,6 +21,7 @@ export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH
 export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOROOT:$GOPATH:$GOBIN
 # export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export HOMEBREW_NO_AUTO_UPDATE=1
 export GO111MODULE=on
