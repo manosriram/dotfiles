@@ -38,23 +38,22 @@ cmd([[
 	set t_vb=
 	filetype plugin on
 	set encoding=UTF-8
-        set guicursor=i:hor25-iCursor
-        set guicursor+=n:block-Cursor/lCursor
+	set guicursor=i:hor25-iCursor
+	set guicursor+=n:block-Cursor/lCursor
 
 	set bg=dark
-        set background=dark
-        colorscheme jellybeans
-        let g:gruvbox_contrast_dark = 'hard'
+	set background=dark
+	colorscheme jellybeans
+	let g:gruvbox_contrast_dark = 'hard'
 
 	hi Visual term=reverse cterm=reverse guibg=White
 	let base16colorspace=256
 
 	set backspace=indent,eol,start
-	set tabstop=4
+	set tabstop=2
 	set softtabstop=4 noexpandtab
 
 	set shiftwidth=4
-	set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 	set splitbelow
 	set splitright
 	set relativenumber
@@ -65,16 +64,16 @@ cmd([[
 	set ttimeout
 	set ttimeoutlen=100
 	set timeoutlen=3000
-        set t_Co=256
-        set termguicolors     " enable true colors support
-        highlight LineNr guifg=white
-        highlight Pmenu guibg=#2C3E50 gui=bold
-        highlight EndOfBuffer ctermfg=white
+	set t_Co=256
+	set termguicolors     " enable true colors support
+	highlight LineNr guifg=white
+	highlight Pmenu guibg=#2C3E50 gui=bold
+	highlight EndOfBuffer ctermfg=white
 
-        inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-        inoremap <expr><C-j> coc#pum#visible() ? coc#pum#next(1) : "\<C-h>"
-        inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
-        inoremap <silent><expr> <C-x><C-o> coc#refresh()
+	inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+	inoremap <expr><C-j> coc#pum#visible() ? coc#pum#next(1) : "\<C-h>"
+	inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
+	inoremap <silent><expr> <C-x><C-o> coc#refresh()
 ]])
 
 g.go_doc_keywordprg_enabled = 0
