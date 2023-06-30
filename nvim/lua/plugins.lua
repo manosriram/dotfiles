@@ -17,9 +17,11 @@ cmd([[
   augroup end
 ]])
 
-require('dap-go').setup()
+require('dapui').setup()
 
 require('packer').startup(function ()
+		use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
 		use 'scrooloose/nerdtree'
 		use 'flazz/vim-colorschemes'
 		use 'mattn/emmet-vim'
@@ -30,7 +32,6 @@ require('packer').startup(function ()
 		use 'mfussenegger/nvim-dap'
 		use 'leoluz/nvim-dap-go'
 		use 'mfussenegger/nvim-dap-python'
-		use "https://github.com/rcarriga/nvim-dap-ui"
 
 		use 'preservim/nerdcommenter'
 		use 'fatih/vim-go'

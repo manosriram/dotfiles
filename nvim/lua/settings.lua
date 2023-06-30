@@ -70,10 +70,6 @@ cmd([[
 	highlight Pmenu guibg=#2C3E50 gui=bold
 	highlight EndOfBuffer ctermfg=white
 
-	inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-	inoremap <expr><C-j> coc#pum#visible() ? coc#pum#next(1) : "\<C-h>"
-	inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
-	inoremap <silent><expr> <C-x><C-o> coc#refresh()
 ]])
 
 g.go_doc_keywordprg_enabled = 0
