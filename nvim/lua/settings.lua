@@ -50,10 +50,8 @@ cmd([[
 	let base16colorspace=256
 
 	set backspace=indent,eol,start
-	set tabstop=2
-	set softtabstop=4 noexpandtab
-
-	set shiftwidth=4
+	set tabstop=2 softtabstop=4 shiftwidth=4
+	set noexpandtab
 	set splitbelow
 	set splitright
 	set relativenumber
@@ -69,7 +67,6 @@ cmd([[
 	highlight LineNr guifg=white
 	highlight Pmenu guibg=#2C3E50 gui=bold
 	highlight EndOfBuffer ctermfg=white
-
 ]])
 
 g.go_doc_keywordprg_enabled = 0

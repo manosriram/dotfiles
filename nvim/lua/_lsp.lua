@@ -5,7 +5,6 @@ lsp.ensure_installed({
     'pyright'
 })
 
-
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -32,7 +31,7 @@ lsp.setup_nvim_cmp({
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
-	vim.keymap.set("n", "K", function() vim.lsp.diagnostic.show_line_diagnostics() end, opts)
+  vim.keymap.set("n", "K", function() vim.lsp.diagnostic.show_line_diagnostics() end, opts)
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
   -- vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
   vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
