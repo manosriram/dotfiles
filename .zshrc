@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-alias python=python3
+# alias python=python3
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -22,6 +22,8 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOROOT:$GOPATH:$GOBIN
+export PATH=/Users/manosriram/.local/bin:$PATH
+export PATH=/opt/homebrew/opt/llvm/bin:$PATH
 # export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export HOMEBREW_NO_AUTO_UPDATE=1
 export GO111MODULE=on
@@ -29,8 +31,21 @@ set KEYTIMEOUT=1
 bindkey "^[^[[D" forward-word
 bindkey "^[^[[C" backward-word
 
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# Download Znap, if it's not there yet.
+[[ -r ~/Repos/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git ~/Repos/znap
+source ~/repos/znap/znap.zsh  # Start Znap
 
 function cprun() {
     g++ -std=c++14 $1 && ./a.out && cat out.txt
@@ -91,6 +106,11 @@ function gitCheckoutNewBranch() {
 		git checkout -b $1
 }
 
+function mkdirAndCd() {
+		mkdir $1;
+		cd $1;
+}
+
 # Aliases.
 alias lst="ls -l"
 alias lsta="ls -a -l"
@@ -104,6 +124,7 @@ alias k="kubectl"
 alias goo="cd $GOPATH/src"
 alias mvim="~/mvim.sh"
 alias c="clear"
+alias cdm=mkdirAndCd
 
 # Git Aliases.
 alias gss="git status"
@@ -113,6 +134,7 @@ alias gbb="git branch"
 alias gd="git diff"
 alias gc=gc
 alias gitchn=gitCheckoutNewBranch
+alias glog="git log"
 
 # TMUX Alias
 alias tmx="tmux"
@@ -134,10 +156,12 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # pnpm
 export PNPM_HOME="/Users/manosriram/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
