@@ -1,0 +1,127 @@
+[
+  {
+    "context": "vim_operator == none && !VimWaiting && vim_mode != insert",
+    "bindings": {
+      "; f": "file_finder::Toggle",
+      ", f i": "file_finder::Toggle",
+      ", f o": "projects::OpenRecent",
+      ", r l": "task::Rerun",
+      "ctrl-s": "projects::OpenRecent"
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "ctrl-w z": "workspace::ToggleZoom",
+      "ctrl-w t": "terminal_panel::ToggleFocus",
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "1 g shift-d": "editor::GoToImplementation",
+      "g ]": "editor::GoToDiagnostic",
+      "g [": "editor::GoToPrevDiagnostic",
+      "g shift-r": "editor::FindAllReferences",
+      "shift-k": "editor::Hover",
+      "g a": "editor::ToggleCodeActions",
+      "g r": "editor::Rename",
+      "[ x": "editor::SelectLargerSyntaxNode",
+      "] x": "editor::SelectSmallerSyntaxNode",
+      "cmd-g": "editor::SelectNext",
+      "cmd-ctrl-g": "editor::SelectAllMatches",
+      "j": [
+        "vim::Down",
+        {
+          "displayLines": true
+        }
+      ],
+      "k": [
+        "vim::Up",
+        {
+          "displayLines": true
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !VimCount",
+    "bindings": {
+      "0": [
+        "vim::StartOfLine",
+        {
+          "displayLines": true
+        }
+      ],
+      "$": [
+        "vim::EndOfLine",
+        {
+          "displayLines": true
+        }
+      ],
+      "z": "editor::DeleteLine",
+      "space r": "editor::FindAllReferences",
+      ", v": "pane::SplitRight",
+      ", h": "pane::SplitDown",
+      "; f": "file_finder::Toggle",
+      "space l": "pane::ActivateNextItem",
+      "space h": "pane::ActivatePrevItem",
+      "space t": "workspace::NewFile"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "g c c": "editor::ToggleComments"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "g c": "editor::ToggleComments"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-b z": "workspace::ToggleZoom",
+      "ctrl-u": "terminal::Clear"
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  }
+]
+
+// [
+//   {
+//     "context": "Editor",
+//     "bindings": {}
+//   },
+//   {
+//     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+//     "bindings": {
+//       "z": "editor::DeleteLine",
+//       "space r": "editor::FindAllReferences",
+//       ", v": "pane::SplitRight",
+//       ", h": "pane::SplitDown",
+//       "; f": "file_finder::Toggle",
+//       "space l": "pane::ActivateNextItem",
+//       "space h": "pane::ActivatePrevItem",
+//       "space t": "workspace::NewFile",
+//       "ctrl-p": "terminal_panel::ToggleFocus",
+//       "ctrl-x": "terminal::SendText"
+//     }
+//   },
+//   {
+//     "context": "Terminal",
+//     "bindings": {
+//       "ctrl-p": "terminal_panel::ToggleFocus"
+//     }
+//   }
+// ]
