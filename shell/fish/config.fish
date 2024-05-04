@@ -14,6 +14,7 @@ fish_add_path $GOROOT/bin
 fish_add_path /opt/homebrew/bin/
 fish_add_path /Users/manosriram/.local/bin
 fish_add_path /opt/homebrew/opt/llvm/bin
+fish_add_path /Users/manosriram/.cargo/bin/
 
 function tmux_attach
     tmux attach-session -t $argv;
