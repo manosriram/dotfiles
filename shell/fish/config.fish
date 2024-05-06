@@ -36,6 +36,14 @@ function git_commit
     git commit -m $argv;
 end
 
+function git_push
+    git push origin $argv;
+end
+
+function git_pull
+    git pull origin $argv;
+end
+
 abbr -a tmx tmux
 abbr -a tls "tmux ls"
 abbr -a tk "tmux kill-server"
@@ -51,3 +59,5 @@ abbr -a gd "git diff"
 abbr -a gitch git_checkout
 abbr -a gitchn git_checkout_to_new_branch
 abbr -a gc git_commit
+abbr -a gps git_push
+abbr -a gpl git_pull
