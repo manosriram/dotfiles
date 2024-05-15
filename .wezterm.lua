@@ -18,7 +18,6 @@ config.color_scheme = '3024 Night'
 config.enable_tab_bar = true
 config.default_cursor_style = "SteadyUnderline"
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
-config.default_prog = { "/bin/zsh" }
 
 keys = {
     -- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
