@@ -13,7 +13,7 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.font = wezterm.font('Fira Code', { weight = 'Medium' })
+config.font = wezterm.font('Jetbrains Mono', { weight = 'Medium', italic = false })
 config.color_scheme = '3024 Night'
 config.enable_tab_bar = true
 config.default_cursor_style = "SteadyUnderline"
