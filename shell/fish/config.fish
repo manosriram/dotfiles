@@ -8,6 +8,7 @@ set -x GO111MODULE on
 
 set -x GOPATH $HOME/go
 set -x GOBIN $HOME/go/bin
+set -g fish_color_autosuggestion white
 
 fish_add_path $GOPATH
 fish_add_path $GOROOT/bin
@@ -61,3 +62,5 @@ abbr -a gitchn git_checkout_to_new_branch
 abbr -a gc git_commit
 abbr -a gps git_push
 abbr -a gpl git_pull
+
+abbr -a k "kubectl"
