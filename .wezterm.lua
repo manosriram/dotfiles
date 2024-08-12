@@ -16,6 +16,19 @@ end
 config.font = wezterm.font('Jetbrains Mono', { weight = 'Medium', italic = false })
 config.font_size = 13.0
 config.color_scheme = '3024 Night'
+config.color_scheme_dirs = { '/Users/manosriram/.wezterm/themes' }
+config.color_scheme = 'Tiniri Dark'
+config.background = {
+  {
+    source = {
+      File = '/Users/manosriram/.wezterm/themes/Tiniri-Dark.png',
+    },
+    width = 600,
+    height = 600,
+    repeat_x = 'Mirror',
+    repeat_y = 'Mirror',
+  },
+}
 config.enable_tab_bar = true
 config.default_cursor_style = "SteadyUnderline"
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
