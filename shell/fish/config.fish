@@ -25,6 +25,10 @@ function tmux_kill_all_sessions
     pkill -f tmux;
 end
 
+function tmux_kill_session_by_id
+		tmux kill-session -t $argv
+end
+
 function git_checkout
     git checkout $argv;
 end
@@ -47,7 +51,7 @@ end
 
 abbr -a tmx tmux
 abbr -a tls "tmux ls"
-abbr -a tk "tmux kill-server"
+abbr -a tk tmux_kill_session_by_id
 abbr -a ta tmux_attach
 abbr -a tx "exit"
 abbr -a tka tmux_kill_all_sessions

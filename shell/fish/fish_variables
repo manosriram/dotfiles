@@ -7,6 +7,20 @@ SETUVAR --export GOBIN:/Users/manosriram/go/bin
 SETUVAR --export GOPATH:/Users/manosriram/go
 SETUVAR --export GOROOT:/usr/local/go
 SETUVAR --export HOMEBREW_NO_AUTO_UPDATE:1
+
+# This file contains the initial defaults for go command configuration.
+# Values set by 'go env -w' and written to the user's go/env file override these.
+# The environment overrides everything else.
+
+# Use the Go module mirror and checksum database by default.
+# See https://proxy.golang.org for details.
+SETUVAR --export GOPROXY:https://proxy.golang.org,direct
+SETUVAR --export GOSUMDB:sum.golang.org
+
+# Automatically download newer toolchains as directed by go.mod files.
+# See https://go.dev/doc/toolchain for details.
+SETUVAR --export GOTOOLCHAIN:auto
+
 SETUVAR LDFLAGS:\x2dL/opt/homebrew/opt/llvm/lib
 SETUVAR PATH:/opt/homebrew/opt/llvm/bin\x3a\x24PATH
 SETUVAR TERM:screen\x2d256color
