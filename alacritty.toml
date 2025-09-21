@@ -1,6 +1,6 @@
 [window]
 decorations = "full"
-opacity = 0.8
+opacity = 1
 dynamic_title = true
 
   [window.dimensions]
@@ -22,7 +22,7 @@ size = 14
   y = 0
 
 [shell]
-		program = "/opt/homebrew/bin/fish"
+		program = "/bin/zsh"
 
 [scrolling]
 history = 10_000
@@ -32,29 +32,41 @@ multiplier = 3
 style = "Underline"
 unfocused_hollow = true
 
-[colors.primary]
-background = "#000000"
-foreground = "#b6b6b6"
-
-[colors.normal]
-black = "#000000"
-green = "#00a600"
-yellow = "#999900"
-magenta = "#b200b2"
-cyan = "#00a6b2"
-white = "#bfbfbf"
+[colors]
+draw_bold_text_with_bright_colors = true
 
 [colors.bright]
-black = "#666666"
-green = "#00d900"
-yellow = "#e5e500"
-magenta = "#e500e5"
-cyan = "#00e5e5"
-white = "#e5e5e5"
+black = "#949494"
+blue = "#74b2ff"
+cyan = "#85dc85"
+green = "#36c692"
+magenta = "#ae81ff"
+red = "#ff5189"
+white = "#e4e4e4"
+yellow = "#c6c684"
 
-# [[keyboard.bindings]]
-# key = "N"
-# mods = "Command"
+[colors.cursor]
+cursor = "#8e8e8e"
+text = "#080808"
+
+[colors.normal]
+black = "#323437"
+blue = "#80a0ff"
+cyan = "#79dac8"
+green = "#8cc85f"
+magenta = "#cf87e8"
+red = "#ff5d5d"
+white = "#c6c6c6"
+yellow = "#e3c78a"
+
+[colors.primary]
+background = "#080808"
+bright_foreground = "#eeeeee"
+foreground = "#bdbdbd"
+
+[colors.selection]
+background = "#b2ceee"
+text = "#080808"
 
 [[keyboard.bindings]]
 key = "PageUp"
