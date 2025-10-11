@@ -10,35 +10,31 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
--- This is where you actually apply your config choices
+config.animation_fps = 60
+config.cursor_blink_ease_in = 'Constant'
+config.cursor_blink_ease_out = 'Constant'
+config.cursor_blink_rate = 500
 
--- For example, changing the color scheme:
+config.max_fps = 120
+config.front_end = "WebGpu"
+
 config.font = wezterm.font('Jetbrains Mono', { weight = 'Medium', italic = false })
-config.font_size = 13.0
-config.color_scheme = '3024 Night'
+config.font_size = 12.0
 config.color_scheme_dirs = { '/Users/manosriram/.wezterm/themes' }
-config.color_scheme = 'Tiniri Dark'
-config.background = {
-  {
-    source = {
-      File = '/Users/manosriram/.wezterm/themes/Tiniri-Dark.png',
-    },
-    width = 600,
-    height = 600,
-    repeat_x = 'Mirror',
-    repeat_y = 'Mirror',
-  },
-}
+
+config.enable_tab_bar = false
+
 config.enable_tab_bar = true
 config.default_cursor_style = "SteadyUnderline"
 config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
 config.macos_window_background_blur = 30
-config.color_scheme = 'Ef-Autumn'
 config.colors = {
 		background = 'rgba(0, 0, 0, 0.8)',
 }
 config.text_background_opacity = 0.7
+
+config.color_scheme = 'Nocturnal Winter'
 
 local keys = {
     -- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
@@ -52,7 +48,7 @@ local keys = {
   }
 }
 config.keys = keys
-config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
+config.default_prog = { '/bin/zsh' }
 
 -- and finally, return the configuration to wezterm
 return config
