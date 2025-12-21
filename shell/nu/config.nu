@@ -28,6 +28,10 @@ alias td = tmux detach
 alias tk = tmux kill-server
 alias tka = pkill -f tmux
 
+def ta [session?: string] {
+  tmux attach-session -t $session
+}
+
 # git
 alias gss = git status
 alias gaa = git add -A

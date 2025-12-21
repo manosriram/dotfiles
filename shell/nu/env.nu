@@ -20,6 +20,7 @@
 # Env.nu - Environment Variables
 
 alias aider_opus4.1 = aider --model=claude-opus-4-20250514 --anthropic-api-key=(open ~/.private/anthropic_key | str trim);
+alias aider_gpt5.2 = aider --model=openai/gpt-5.2 --openai-api-key=(open ~/.private/openai_key | str trim);
 
 # =====================
 # PATH handling
